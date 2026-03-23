@@ -1,0 +1,223 @@
+/* =========================================
+   ОБЩИЕ КОМПОНЕНТЫ
+   ========================================= */
+
+/* Кнопки CTA */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 40px;
+    background: var(--gradient-orange);
+    color: var(--white);
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.cta-button.secondary {
+    background: var(--gradient-blue);
+}
+
+.cta-button.small {
+    padding: 10px 25px;
+    font-size: 14px;
+}
+
+/* Фильтры и поиск */
+.news-filters, .filter-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.news-filter-btn, .filter-btn {
+    padding: 8px 20px;
+    background: transparent;
+    border: 2px solid var(--electric-cyan);
+    color: var(--deep-blue);
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.news-filter-btn.active, .news-filter-btn:hover,
+.filter-btn.active, .filter-btn:hover {
+    background: var(--electric-cyan);
+    color: var(--white);
+}
+
+.news-search {
+    display: flex;
+    max-width: 400px;
+    margin: 0 auto 40px;
+    position: relative;
+}
+
+.news-search input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid var(--gray);
+    border-radius: 25px;
+    outline: none;
+}
+
+.news-search button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    width: 40px;
+    background: var(--gradient-blue);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Пагинация */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.page-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gray);
+    background: var(--white);
+    color: var(--deep-blue);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.page-btn.active, .page-btn:hover {
+    background: var(--gradient-blue);
+    color: var(--white);
+    border-color: transparent;
+}
+
+.page-btn.prev, .page-btn.next {
+    width: auto;
+    padding: 0 15px;
+}
+
+/* Карточки событий (общие) */
+.event-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 15px;
+}
+
+.event-date {
+    background: var(--light-gray);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    min-width: 80px;
+}
+
+/* Сетка звонков */
+.bell-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.bell-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+}
+
+.bell-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 18px;
+}
+
+.bell-info {
+    flex: 1;
+}
+
+.bell-lesson {
+    font-weight: 600;
+    color: var(--deep-blue);
+}
+
+.bell-time {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
+
+/* Блок замен */
+.substitutions {
+    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-top: 40px;
+    border-left: 4px solid var(--bright-orange);
+}
+
+.substitutions h3 {
+    color: var(--deep-blue);
+    margin-bottom: 15px;
+}
+
+.substitution-item {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--bright-orange);
+}
+
+.substitution-item:last-child {
+    border-bottom: none;
+}
+
+.substitution-date {
+    font-weight: 700;
+    color: var(--bright-orange);
+    min-width: 100px;
+}

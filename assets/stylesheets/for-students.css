@@ -1,0 +1,155 @@
+/* =========================================
+   СТРАНИЦА "ДЛЯ УЧАЩИХСЯ"
+   ========================================= */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.info-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 30px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    text-align: center;
+    border: 1px solid var(--gray);
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--electric-cyan);
+}
+
+.info-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: var(--gradient-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: var(--white);
+}
+
+.info-card h3 {
+    color: var(--deep-blue);
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+}
+
+.info-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--electric-cyan);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.info-link:hover {
+    gap: 12px;
+    color: var(--bright-orange);
+}
+
+/* Ресурсы */
+.section-light {
+    background: var(--light-gray);
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.resource-item {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: var(--transition);
+}
+
+.resource-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--electric-cyan);
+}
+
+.resource-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--white);
+    flex-shrink: 0;
+}
+
+.resource-content h4 {
+    color: var(--deep-blue);
+    margin-bottom: 5px;
+}
+
+.resource-content p {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
+
+/* Ученический совет */
+.council-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.council-member {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.member-photo {
+    height: 200px;
+    background: var(--gradient-blue);
+}
+
+.member-info {
+    padding: 25px;
+}
+
+.member-name {
+    color: var(--deep-blue);
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: var(--electric-cyan);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.member-desc {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}

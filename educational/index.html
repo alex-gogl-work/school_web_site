@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="kk" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Официальный сайт КГУ Средняя школа №9 имени А. Байтурсынулы">
+    <title>Оқу процесі - «Ахмет Байтұрсынұлы атындағы № 9 орта мектеп» КММ</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+
+   
+        <link rel="stylesheet" href="../assets/stylesheets/style.css">
+    
+        <link rel="stylesheet" href="../assets/stylesheets/news_page.css">
+    
+
+    
+    
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="">
+<header>
+    <div class="container header-main-wrapper">
+        <div class="header-logo-section">
+    <a href="../..">
+        <img id="main-logo" 
+             src="../assets/images/logo/logo_kaz.png" 
+             data-logo-ru="../assets/images/logo/logo_rus.png" 
+             data-logo-kk="../assets/images/logo/logo_kaz.png" 
+             alt="Логотип школы">
+    </a>
+</div>
+	<div class="header-content-section">
+		<div class="header-top-row">
+        <div class="school-title">
+                    <div class="school-name-main">
+                         «Ахмет Байтұрсынұлы атындағы № 9 орта мектеп» КММ
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <button id="toggle-dark-mode" class="accessibility-btn" title="Темная тема (Dark Mode)">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="toggle-bvi" class="accessibility-btn" title="Версия для слабовидящих">
+                        <i class="fas fa-eye"></i> <span>Доступность</span>
+                    </button>
+                    
+                    <div class="lang-switcher">
+                        
+                        
+                        
+                        
+
+                        
+                            
+                            
+                                
+                            
+
+                            <a href="../ru/educational/" 
+                               class="lang-btn " 
+                               data-lang="ru">
+                               RU
+                            </a>
+                        
+                            
+                            
+
+                            <a href="../educational/" 
+                               class="lang-btn active" 
+                               data-lang="kk">
+                               KK
+                            </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    
+                        
+                            <li class="menu">
+                                <a href=".." 
+                                    
+                                   data-nav-title="Басты бет">Басты бет</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="../about/" 
+                                    
+                                   data-nav-title="Мектеп туралы">Мектеп туралы</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="./" 
+                                   class="active" 
+                                   data-nav-title="Оқу процесі">Оқу процесі</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="../school-life/" 
+                                    
+                                   data-nav-title="Мектеп өмірі">Мектеп өмірі</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="../official/" 
+                                    
+                                   data-nav-title="Ресми бөлім">Ресми бөлім</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="../news/" 
+                                    
+                                   data-nav-title="Жаңалықтар">Жаңалықтар</a>
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+        </div>
+</div>
+</header>
+
+    <main>
+        <style>
+/* Осы беттегі әдемі қойындыларға арналған стильдер */
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-bottom: 40px;
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 10;
+}
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #777;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.tab-btn:hover {
+    background: #f0f4f8;
+    color: var(--md-primary-fg-color, #1a73e8);
+}
+.tab-btn.active {
+    background: var(--md-primary-fg-color, #1a73e8);
+    color: white;
+    box-shadow: 0 4px 15px rgba(26, 115, 232, 0.3);
+}
+.tab-content {
+    display: none;
+    animation: fadeInTab 0.4s ease-out forwards;
+}
+.tab-content.active {
+    display: block;
+}
+@keyframes fadeInTab {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Қолдау қызметтері үшін стильдер */
+.support-block { padding: 40px 0; }
+.support-bg { background: #f8f9fa; border-radius: 15px; padding: 40px; margin: 30px 0; border: 1px solid #eee; }
+
+.specialists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+.specialist-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+.specialist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border-color: var(--md-primary-fg-color);
+}
+.specialist-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #f0f4f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--md-primary-fg-color);
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.specialist-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.specialist-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+.specialist-role {
+    color: var(--md-primary-fg-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+.specialist-details {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.advice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+.advice-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid var(--md-primary-fg-color);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+}
+.advice-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+}
+.advice-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.emergency-banner {
+    background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+.emergency-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.emergency-numbers {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.emergency-num-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.emergency-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+.emergency-phone-link {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+}
+.emergency-phone-link:hover {
+    text-decoration: underline;
+}
+</style>
+
+<section class="page-hero">
+    <div class="container page-hero-content">
+        <h1>ОҚУ ПРОЦЕСІ</h1>
+        <p>Біздің мектептегі сапалы білім, қолдау және даму</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="tabs-container" id="main-edu-tabs">
+        <button class="tab-btn active" data-tab="tab-administration"><i class="fas fa-user-tie"></i> Әкімшілік</button>
+        <button class="tab-btn" data-tab="tab-support"><i class="fas fa-hands-helping"></i> Қолдау қызметтері</button>
+        <button class="tab-btn" data-tab="tab-teachers"><i class="fas fa-users"></i> Педагогикалық құрам</button>
+        <button class="tab-btn" data-tab="tab-schedule"><i class="fas fa-calendar-alt"></i> Сабақ кестесі</button>
+        <button class="tab-btn" data-tab="tab-minicenter"><i class="fas fa-child"></i> Шағын орталық</button>
+    </div>
+
+    <!-- ТАБ: ҚОЛДАУ ҚЫЗМЕТТЕРІ -->
+    <div id="tab-support" class="tab-content">
+        <!-- Қолдау қызметтерінің ішкі қойындылары -->
+        <div class="tabs-container" id="support-nested-tabs" style="margin-top: 20px; margin-bottom: 30px; box-shadow: none; border: 1px solid #eee;">
+            <button class="tab-btn active" data-tab="tab-medical"><i class="fas fa-notes-medical"></i> Медпункт</button>
+            <button class="tab-btn" data-tab="tab-psychology"><i class="fas fa-brain"></i> Психолог</button>
+            <button class="tab-btn" data-tab="tab-speech"><i class="fas fa-comments"></i> Логопед</button>
+            <button class="tab-btn" data-tab="tab-resource"><i class="fas fa-hands-helping"></i> Ресурстық орталық</button>
+        </div>
+
+        <div id="tab-medical" class="tab-content active">
+            <div class="support-block">
+                <h2 class="section-title">МЕДИЦИНАЛЫҚ КАБИНЕТ</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p><strong>Медицина қызметкері:</strong> Петрова Ирина Викторовна</p>
+                        <p><strong>Жұмыс кестесі:</strong> дс–жм 8:00–16:00</p>
+                        <p><strong>Телефон:</strong> +7 (7152) 51-22-49</p>
+                        <p><strong>Кабинет:</strong> № 101</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="/assets/images/medical/nurse.jpg" alt="Медбике" style="border-radius: 10px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="support-bg">
+                <h2 class="section-title">Профилактикалық шаралар</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <h3>Вакцинация</h3>
+                        <p>Екпелер Ұлттық күнтізбеге сәйкес жүргізіледі. Ата-аналар алдын ала хабардар етіледі. Бас тарту жазбаша түрде ресімделеді.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Медициналық тексерулер</h3>
+                        <p>Жыл сайынғы тар мамандардың профилактикалық тексерулері бекітілген емхана базасында өткізіледі.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Тамақтануды бақылау</h3>
+                        <p>Дайын өнімнің күнделікті бракеражы, ас блогының санитарлық жай-күйін бақылау.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-psychology" class="tab-content">
+            <div class="support-block">
+                <h2 class="section-title">ПСИХОЛОГИЯЛЫҚ-ПЕДАГОГИКАЛЫҚ ҚЫЗМЕТ</h2>
+                <p style="text-align: center; margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto;">Біздің миссиямыз — білім беру процесінің барлық қатысушыларының психологиялық денсаулығын сақтау және нығайту үшін жағдай жасау. Біз балаларға бейімделуге, мұғалімдерге — тәсіл табуға, ал ата-аналарға — балаларын жақсырақ түсінуге көмектесеміз.</p>
+
+                <div class="specialists-grid">
+                    <div class="specialist-card">
+                        <div class="specialist-img">
+                            <img src="/assets/images/specialists/aijan.png" alt="Айжан Мұратқызы">
+                        </div>
+                        <div class="specialist-info">
+                            <h4>Айжан Мұратқызы</h4>
+                            <div class="specialist-role">Жоғары санатты педагог-психолог</div>
+                            <div class="specialist-details">
+                                <p><i class="fas fa-clock"></i> Дс-Жм: 09:00 — 17:30</p>
+                                <p><i class="fas fa-phone"></i> +7 (7152) 51-22-45</p>
+                                <p><i class="fas fa-door-open"></i> №204 кабинет</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="specialist-card">
+                        <div class="specialist-img">
+                            <img src="/assets/images/specialists/sergey.png" alt="Сергей Владимирович">
+                        </div>
+                        <div class="specialist-info">
+                            <h4>Сергей Владимирович</h4>
+                            <div class="specialist-role">Бірінші санатты психолог</div>
+                            <div class="specialist-details">
+                                <p><i class="fas fa-clock"></i> Дс-Жм: 08:30 — 17:00</p>
+                                <p><i class="fas fa-phone"></i> +7 (7152) 51-22-46</p>
+                                <p><i class="fas fa-door-open"></i> №205 кабинет</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="support-bg">
+                <h2 class="section-title">Психолог кеңестері</h2>
+                <div class="advice-grid">
+                    <div class="advice-card">
+                        <h3><i class="fas fa-graduation-cap"></i> Оқушыларға</h3>
+                        <p><strong>ЕМТИХАН алдындағы қобалжуды қалай жеңуге болады:</strong> Ұйқы режимін сақтаңыз, әр 45 минут сайын үзіліс жасаңыз және физикалық белсенділікті ұмытпаңыз. Есіңізде болсын: емтихан — бұл жай ғана кезең, ал сіздің денсаулығыңыз бәрінен маңызды.</p>
+                    </div>
+                    <div class="advice-card">
+                        <h3><i class="fas fa-heart"></i> Ата-аналарға</h3>
+                        <p><strong>ҚОЛДАУДЫҢ алтын ережесі:</strong> Баланы сөзін бөлмей тыңдаңыз. Кейде оған кеңес емес, жай ғана тыңдалу керек. Тек нәтижені емес, талпынысты да мақтаңыз.</p>
+                    </div>
+                    <div class="advice-card">
+                        <h3><i class="fas fa-comments"></i> Қарым-қатынас</h3>
+                        <p><strong>ҚҰРДАСТАРМЕН қақтығыстар:</strong> Өз сезімдеріңіз туралы «Мен-хабарлама» арқылы айтуды үйреніңіз («Сен әрдайым...» орнына «Маған ... кезде ренішті»). Тыңдай білу — кез келген даудағы табыстың жартысы.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="support-block" style="padding-top: 0;">
+                <h2 class="section-title">Жаңалықтар: Пайдалы материалдар</h2>
+                <p style="text-align: center; margin-bottom: 30px;">Жүктеп алуға арналған жаңа ұсыныстар мен материалдар</p>
+                <div class="specialists-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="specialist-card" style="flex-direction: column; align-items: flex-start; padding: 20px;">
+                        <div style="font-size: 2rem; color: #f44336; margin-bottom: 15px;"><i class="fas fa-file-pdf"></i></div>
+                        <h4 style="margin-bottom: 10px;">Мектепке дайындық</h4>
+                        <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">Болашақ бірінші сынып оқушыларының ата-аналарына арналған чек-лист: 1 қыркүйекке дейін не нәрсеге назар аудару керек.</p>
+                        <a href="#" class="md-button md-button--primary" style="font-size: 0.8rem; padding: 5px 15px; border-radius: 5px;">Жүктеу PDF</a>
+                    </div>
+                    <div class="specialist-card" style="flex-direction: column; align-items: flex-start; padding: 20px;">
+                        <div style="font-size: 2rem; color: #4caf50; margin-bottom: 15px;"><i class="fas fa-file-pdf"></i></div>
+                        <h4 style="margin-bottom: 10px;">5-сыныптағы бейімделу</h4>
+                        <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">Орта мектепке ауысу кезінде баланы қалай қолдауға және жаңа жүктемелерді еңсеруге көмектесуге болады.</p>
+                        <a href="#" class="md-button md-button--primary" style="font-size: 0.8rem; padding: 5px 15px; border-radius: 5px;">Жүктеу PDF</a>
+                    </div>
+                    <div class="specialist-card" style="flex-direction: column; align-items: flex-start; padding: 20px;">
+                        <div style="font-size: 2rem; color: #2196f3; margin-bottom: 15px;"><i class="fas fa-file-pdf"></i></div>
+                        <h4 style="margin-bottom: 10px;">Тыныштық құпиялары</h4>
+                        <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">Жасөспірімдердің эмоционалдық кернеуін жеңілдетуге арналған тыныс алу техникалары мен жаттығулар.</p>
+                        <a href="#" class="md-button md-button--primary" style="font-size: 0.8rem; padding: 5px 15px; border-radius: 5px;">Жүктеу PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="emergency-banner">
+                <div class="emergency-title">Сенім телефондары (Анонимді және құпия)</div>
+                <div class="emergency-numbers">
+                    <div class="emergency-num-item">
+                        <div class="emergency-label">ҚР бірыңғай байланыс орталығы</div>
+                        <a href="tel:111" class="emergency-phone-link">111</a>
+                    </div>
+                    <div class="emergency-num-item">
+                        <div class="emergency-label">СҚО ПД (Петропавл)</div>
+                        <a href="tel:11616" class="emergency-phone-link">116 16</a>
+                    </div>
+                    <div class="emergency-num-item">
+                        <div class="emergency-label">Полиция</div>
+                        <a href="tel:102" class="emergency-phone-link">102</a>
+                    </div>
+                    <div class="emergency-num-item">
+                        <div class="emergency-label">Балалар мен жасөспірімдер үшін</div>
+                        <a href="tel:88002000122" class="emergency-phone-link">8 800 2000 122</a>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; font-style: italic; opacity: 0.9;">Тегін психологиялық көмек және құқық бұзушылықтар туралы хабарлау — тәулік бойы.</p>
+            </div>
+        </div>
+
+        <div id="tab-speech" class="tab-content">
+            <div class="support-block">
+                <h2 class="section-title">ЛОГОПЕД КАБИНЕТІ</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p><strong>Маман:</strong> Гүлназ Серікқызы</p>
+                        <p><strong>Білімі:</strong> ҚазҰПУ, дефектология (Өтілі 12 жыл)</p>
+                        <p><strong>Жұмыс кестесі:</strong> дс, ср, жм 9:00–15:00</p>
+                        <p><strong>Телефон:</strong> +7 (7152) 51-22-48</p>
+                        <p><strong>Кабинет:</strong> № 112</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="/assets/images/speech/logoped.jpg" alt="Логопед" style="border-radius: 10px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="support-bg">
+                <h2 class="section-title">Жұмыс бағыттары</h2>
+                <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-volume-up"></i></div>
+                        <h3>Дыбыстарды айту</h3>
+                        <p>Дыбыстарды қою және автоматтандыру.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-spell-check"></i></div>
+                        <h3>Грамматика және сөйлеу</h3>
+                        <p>Сөзжасам дағдыларын қалыптастыру және ойды жүйелі жеткізу.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-book-reader"></i></div>
+                        <h3>Оқу және жазу</h3>
+                        <p>Дислексия мен дисграфияның алдын алу және түзету.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-resource" class="tab-content">
+            <div class="support-block">
+                <h2 class="section-title">ИНКЛЮЗИВТІ БІЛІМ БЕРУ ОРТАЛЫҒЫ</h2>
+                <p style="text-align: center; margin-bottom: 30px;">Әрбір бала үшін тең мүмкіндіктер. Орталық ЕБҚ бар балаларға психологиялық-педагогикалық қолдау көрсетеді.</p>
+
+                <div class="specialists-grid">
+                    <div class="specialist-card">
+                        <div class="specialist-icon"><i class="fas fa-hands-helping"></i></div>
+                        <div class="specialist-info">
+                            <h4>Орталық координаторы</h4>
+                            <p>Кабинет: № 109 (1 қабат)</p>
+                            <p>Кесте: дс–жм 9:00–17:00</p>
+                        </div>
+                    </div>
+                    <div class="specialist-card">
+                        <div class="specialist-icon"><i class="fas fa-user-nurse"></i></div>
+                        <div class="specialist-info">
+                            <h4>Арнайы педагог</h4>
+                            <p>Мария Иванова</p>
+                            <p>Дефектолог</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="support-bg">
+                <h2 class="section-title">Орталықтың құжаттары</h2>
+                <div class="documents-grid" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <div class="document-card" style="background: white; padding: 20px; border-radius: 10px; width: 300px;">
+                        <div class="document-icon"><i class="fas fa-file-pdf" style="color: #e53935; font-size: 2rem;"></i></div>
+                        <div class="document-info">
+                            <h4 style="margin: 10px 0;">Орталық туралы ереже</h4>
+                            <a href="/documents/resource_center_regulations.pdf" target="_blank" class="document-link">Жүктеу <i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                    <div class="document-card" style="background: white; padding: 20px; border-radius: 10px; width: 300px;">
+                        <div class="document-icon"><i class="fas fa-file-pdf" style="color: #e53935; font-size: 2rem;"></i></div>
+                        <div class="document-info">
+                            <h4 style="margin: 10px 0;">Ата-аналарға арналған жаднама</h4>
+                            <a href="/documents/parents_guide_inclusion.pdf" target="_blank" class="document-link">Жүктеу <i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Соңы: ҚОЛДАУ ҚЫЗМЕТТЕРІ -->
+
+    <!-- ТАБ: АДМИНИСТРАЦИЯ -->
+    <div id="tab-administration" class="tab-content active">
+        <section style="padding: 40px 0;">
+            <div class="container">
+                <h2 class="section-title">МЕКТЕП ДИРЕКТОРЫ</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="/assets/images/administration/director.jpg" alt="Мектеп директоры">
+                    </div>
+                    <div class="about-text">
+                        <h3>Аленова Гульден Жаксылыковна</h3>
+                        <p><strong>Білімі:</strong> Жоғары, Абай атындағы ҚазҰПУ, «Білім беруді басқару» мамандығы.</p>
+                        <p><strong>Педагогикалық өтілі:</strong> 25 жыл.</p>
+                        <p><strong>Қабылдау кестесі:</strong> Дүйсенбі, сәрсенбі 14:00–17:00 (алдын ала жазылу бойынша).</p>
+                        <p><strong>Телефон:</strong> +7 (7152) 37-11-24</p>
+                        <p><strong>E-mail:</strong> director@school9.edu.kz</p>
+                        <p>2012 жылдан бастап мектепті басқарады. Негізгі қызмет бағыттары: инновациялық технологияларды енгізу, материалдық-техникалық базаны дамыту, білім сапасын арттыру.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-light" style="padding: 40px 0;">
+            <div class="container">
+                <h2 class="section-title">ДИРЕКТОРДЫҢ ОРЫНБАСАРЛАРЫ</h2>
+                <div class="teachers-grid">
+                    <div class="teacher-card">
+                        <div class="teacher-photo"><img src="/assets/images/administration/zam1.jpg" alt="Петрова Анна Сергеевна"></div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name">Петрова Анна Сергеевна</h3>
+                            <div class="teacher-position">Оқу ісі жөніндегі орынбасар</div>
+                            <div class="teacher-details">
+                                <div class="teacher-detail"><i class="fas fa-phone"></i> +7 (7152) 51-22-35</div>
+                                <div class="teacher-detail"><i class="fas fa-envelope"></i> zaveduch@school9.edu.kz</div>
+                                <div class="teacher-detail"><i class="fas fa-clock"></i> Қабылдау: сей, бей 10:00–13:00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-photo"><img src="/assets/images/administration/zam2.jpg" alt="Сидоров Иван Васильевич"></div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name">Сидоров Иван Васильевич</h3>
+                            <div class="teacher-position">Тәрбие ісі жөніндегі орынбасар</div>
+                            <div class="teacher-details">
+                                <div class="teacher-detail"><i class="fas fa-phone"></i> +7 (7152) 51-22-36</div>
+                                <div class="teacher-detail"><i class="fas fa-envelope"></i> vospit@school9.edu.kz</div>
+                                <div class="teacher-detail"><i class="fas fa-clock"></i> Қабылдау: дс, ср 15:00–17:00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-photo"><img src="/assets/images/administration/zam3.jpg" alt="Калиева Гульмира Болатовна"></div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name">Калиева Гульмира Болатовна</h3>
+                            <div class="teacher-position">Ғылыми-әдістемелік іс жөніндегі орынбасар</div>
+                            <div class="teacher-details">
+                                <div class="teacher-detail"><i class="fas fa-phone"></i> +7 (7152) 51-22-37</div>
+                                <div class="teacher-detail"><i class="fas fa-envelope"></i> metod@school9.edu.kz</div>
+                                <div class="teacher-detail"><i class="fas fa-clock"></i> Қабылдау: сей, жм 14:00–16:00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> <!-- Соңы: АДМИНИСТРАЦИЯ -->
+
+    <!-- ТАБ: САБАҚ КЕСТЕСІ -->
+    <div id="tab-schedule" class="tab-content">
+        <section style="padding: 40px 0;">
+            <div class="container">
+                <div class="class-selector">
+                    <button class="class-btn active" data-class="7a">7 А</button>
+                    <button class="class-btn" data-class="7b">7 Б</button>
+                    <button class="class-btn" data-class="8a">8 А</button>
+                    <button class="class-btn" data-class="8b">8 Б</button>
+                    <button class="class-btn" data-class="9a">9 А</button>
+                    <button class="class-btn" data-class="9b">9 Б</button>
+                    <button class="class-btn" data-class="10a">10 А</button>
+                    <button class="class-btn" data-class="10b">10 Б</button>
+                    <button class="class-btn" data-class="11a">11 А</button>
+                    <button class="class-btn" data-class="11b">11 Б</button>
+                </div>
+
+                <div class="substitutions">
+                    <h3>❗ АУЫСТЫРУЛАР</h3>
+                    <div class="substitution-item"><div class="substitution-date">18.03.2024</div><div class="substitution-info"><strong>7А сынып:</strong> Алгебра (Сапарова Н.) → Физика (Нұрмағамбетов А.), 305 каб.</div></div>
+                    <div class="substitution-item"><div class="substitution-date">19.03.2024</div><div class="substitution-info"><strong>7А сынып:</strong> Ағылшын тілі (Петрова Е.) → Қазақ тілі (Рахманова Г.), 215 каб.</div></div>
+                </div>
+
+                <div class="bell-schedule">
+                    <h2 class="section-title">ҚОҢЫРАУЛАР КЕСТЕСІ</h2>
+                    <div class="bell-grid">
+                        <div class="bell-item"><div class="bell-icon">1</div><div class="bell-info"><div class="bell-lesson">1-ші сабақ</div><div class="bell-time">8:30 - 9:15</div></div></div>
+                        <div class="bell-item"><div class="bell-icon">2</div><div class="bell-info"><div class="bell-lesson">2-ші сабақ</div><div class="bell-time">9:25 - 10:10</div></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> <!-- Соңы: САБАҚ КЕСТЕСІ -->
+
+    <!-- ТАБ: ПЕДАГОГИКАЛЫҚ ҚҰРАМ -->
+    <div id="tab-teachers" class="tab-content">
+        <section style="padding: 40px 0;">
+            <div class="container">
+                <h2 class="section-title">ӘДІСТЕМЕЛІК БІРЛЕСТІКТЕР</h2> 
+                <div class="teachers-grid">
+                    <div class="teacher-card">
+                        <div class="teacher-photo"><img src="/assets/images/mo/mo_1.webp" alt="Бастауыш сынып мұғалімдерінің ӘБ"></div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name"><a href="../mo/mo_1/">Бастауыш сынып мұғалімдерінің ӘБ</a></h3> <p>Жетекшісі: Шакирова А.К.</p> </div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-photo"><img src="/assets/images/mo/mo_2.webp" alt="Жаратылыстану-математикалық цикл ӘБ"></div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name"><a href="../mo/mo_2/">Жаратылыстану-математикалық цикл ӘБ</a></h3> <p>Математика, Физика, Информатика</p> <p>Жетекшісі: Сапарова Н.К.</p> </div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-photo"><img src="/assets/images/mo/mo_3.webp" alt="Қазақ тілі мен әдебиеті пәндерінің ӘБ"></div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name"><a href="../mo/mo_3/">Қазақ тілі мен әдебиеті пәндерінің ӘБ</a></h3> <p>Жетекшісі: Рахманова Г.А.</p> </div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-photo"><img src="/assets/images/mo/mo_4.webp" alt="Орыс тілі мен әдебиеті пәндерінің ӘБ"></div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name"><a href="../mo/mo_4/">Орыс тілі мен әдебиеті пәндерінің ӘБ</a></h3> <p>Жетекшісі: (анықталуда)</p> </div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-photo"><img src="/assets/images/mo/mo_5.webp" alt="Ағылшын тілі пәні мұғалімдерінің ӘБ"></div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name"><a href="../mo/mo_5/">Ағылшын тілі пәні мұғалімдерінің ӘБ</a></h3> <p>Жетекшісі: (анықталуда)</p> </div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-photo"><img src="/assets/images/mo/mo_6.webp" alt="Жаратылыстану-ғылыми цикл ӘБ"></div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name"><a href="../mo/mo_6/">Жаратылыстану-ғылыми цикл ӘБ</a></h3> <p>Химия, Биология, География</p> <p>Жетекшісі: (анықталуда)</p> </div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-photo"><img src="/assets/images/mo/mo_7.webp" alt="Қоғамдық-гуманитарлық цикл ӘБ"></div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name"><a href="../mo/mo_7/">Қоғамдық-гуманитарлық цикл ӘБ</a></h3> <p>Тарих, Құқық</p> <p>Жетекшісі: (анықталуда)</p> </div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-photo"><img src="/assets/images/mo/mo_8.webp" alt="Қолданбалы цикл және дене шынықтыру ӘБ"></div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name"><a href="../mo/mo_8/">Қолданбалы цикл және дене шынықтыру ӘБ</a></h3> <p>Дене шынықтыру, Өнер, Технология, АӘД</p> <p>Жетекшісі: (анықталуда)</p> </div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-photo"><img src="/assets/images/mo/mo_9.webp" alt="Сынып жетекшілерінің ӘБ"></div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name"><a href="../mo/mo_9/">Сынып жетекшілерінің ӘБ</a></h3> <p>Жетекшісі: (анықталуда)</p> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-light" style="padding: 40px 0;">
+            <div class="container">
+                <h2 class="section-title">ПЕДАГОГТАРДЫ АТТЕСТАТТАУ</h2> 
+                <div class="documents-grid">
+                    <div class="document-card">
+                        <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                        <div class="document-info">
+                            <h4>2024-2025 оқу жылына арналған аттестаттау жоспар-кестесі</h4> <a href="/documents/attestation_plan_2024_2025.pdf" target="_blank" class="document-link">Жүктеу</a>
+                        </div>
+                    </div>
+                    <div class="document-card">
+                        <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                        <div class="document-info">
+                            <h4>Аттестаттау туралы ереже</h4> <a href="/documents/attestation_rules.pdf" target="_blank" class="document-link">Жүктеу</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 40px 0;">
+            <div class="container">
+                <h2 class="section-title">АЛДАҒЫ ОҚИҒАЛАР</h2> 
+                <div class="events-list">
+                    <div class="event-item">
+                        <div class="event-date">25 наурыз</div> <div class="event-info">
+                            <h4>Қалалық математика мұғалімдерінің семинары</h4> <p>Біздің мектеп базасында</p> </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">10 сәуір</div> <div class="event-info">
+                            <h4>«Білімдегі инновациялар» конференциясы</h4> <p>Онлайн</p> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- ЖАЛҒАСЫ: ПЕДАГОГИКАЛЫҚ ҚҰРАМ -->
+        <section style="padding: 40px 0 0;">
+            <div class="container">
+                <div class="filter-container">
+                    <button class="filter-btn active" data-filter="all">БАРЛЫҒЫ</button>
+                    <button class="filter-btn" data-filter="math">МАТЕМАТИКА</button>
+                    <button class="filter-btn" data-filter="physics">ФИЗИКА</button>
+                    <button class="filter-btn" data-filter="chemistry">ХИМИЯ</button>
+                    <button class="filter-btn" data-filter="biology">БИОЛОГИЯ</button>
+                    <button class="filter-btn" data-filter="informatics">ИНФОРМАТИКА</button>
+                    <button class="filter-btn" data-filter="geography">ГЕОГРАФИЯ</button>
+                    <button class="filter-btn" data-filter="language">ТІЛДЕР</button>
+                    <button class="filter-btn" data-filter="history-law">ТАРИХ ПЕН ҚҰҚЫҚ</button>
+                    <button class="filter-btn" data-filter="primary">БАСТАУЫШ</button>
+                    <button class="filter-btn" data-filter="sport-art">СПОРТ ПЕН ӨНЕР</button>
+                    <button class="filter-btn" data-filter="military">АӘД / ДАЙЫНДЫҚ</button>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 40px 0 80px;">
+            <div class="container">
+                <div class="teachers-grid" id="teachers-grid-container">
+                    <!-- Мұғалімдер тізімі assets/js/teachers_render.js арқылы автоматты түрде жасалады -->
+                    <div class="loading-placeholder">Педагогикалық құрам жүктелуде...</div>
+                </div>
+
+                <div class="pagination">
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn next">КЕЛЕСІ</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal-overlay" id="teacherModal">
+            <div class="teacher-modal">
+                <button class="modal-close" id="modalClose">&times;</button>
+                <div class="modal-header">
+                    <div class="modal-photo" id="modalPhoto"><img src="" alt=""></div>
+                    <div class="modal-title">
+                        <h2 id="modalName"></h2>
+                        <div class="modal-position" id="modalPosition"></div>
+                        <div id="modalDepartment" class="teacher-tag"></div>
+                    </div>
+                </div>
+                <div class="modal-tabs">
+                    <button class="modal-tab active" data-tab="about">МҰҒАЛІМ ТУРАЛЫ</button>
+                    <button class="modal-tab" data-tab="education">БІЛІМІ</button>
+                    <button class="modal-tab" data-tab="achievements">ЖЕТІСТІКТЕРІ</button>
+                    <button class="modal-tab" data-tab="schedule">КЕСТЕСІ</button>
+                </div>
+                <div class="tab-content active" id="tabAbout"><p id="modalDescription"></p></div>
+                <div class="tab-content" id="tabEducation"><ul id="modalEducation"></ul></div>
+            </div>
+        </div>
+    </div> <!-- Соңы: ПЕДАГОГИКАЛЫҚ ҚҰРАМ -->
+
+    <!-- ТАБ: ШАҒЫН ОРТАЛЫҚ -->
+    <div id="tab-minicenter" class="tab-content">
+        <section style="padding: 40px 0;">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>БІЗ ТУРАЛЫ</h2>
+                        <p>Шағын орталық мектеп базасында 2015 жылдан бастап жұмыс істейді. Мектептегі оқуға даярлау үшін 5–6 жастағы балалар қабылданады. Сабақтарды тәжірибелі бастауыш сынып мұғалімдері мен психологтар жүргізеді.</p>
+                        <p>Негізгі мақсат – танымдық қабілеттерді, коммуникативті дағдыларды және оқуға деген мотивацияны дамыту.</p>
+                        <p><strong>Жұмыс режимі:</strong> дс–жм, 9:00 – 13:00 (бірінші ауысым), 15:00 – 18:00 (екінші ауысым).</p>
+                        <p><strong>Телефон:</strong> +7 (7152) 47-06-70 </p>
+                        <p><strong>E-mail:</strong> minicenter@school9.edu.kz </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="/assets/images/center/center.jpg" alt="Шағын орталық"> </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-light" style="padding: 40px 0;">
+            <div class="container">
+                <h2 class="section-title">БІЛІМ БЕРУ БАҒДАРЛАМАСЫ</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-book"></i></div>
+                        <h3>Сауат ашу</h3> <p>Дыбыстар, әріптер, буындап оқу</p> </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-calculator"></i></div>
+                        <h3>Математика</h3> <p>Санау, қарапайым есептер, геометриялық фигуралар</p> </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-paint-brush"></i></div>
+                        <h3>Шығармашылық</h3> <p>Сурет салу, мүсіндеу, аппликация</p> </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fas fa-smile"></i></div>
+                        <h3>Психолог</h3> <p>Зейінді, жадыны, ойлауды дамыту</p> </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 40px 0;">
+            <div class="container">
+                <h2 class="section-title">ҚАБЫЛДАУ ЕРЕЖЕЛЕРІ</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <h3>Өтініш беру мерзімі</h3> <p>1 сәуірден 31 тамызға дейін (бос орындар болған жағдайда – жыл бойы)</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-file-alt"></i></div>
+                        <h3>Қажетті құжаттар</h3> <p>Ата-аналардың өтініші, туу туралы куәліктің көшірмесі, медициналық анықтама</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <h3>Кеңес алу</h3> <p>+7 (7152) 47-06-70 телефоны арқылы немесе 109 кабинетте</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> <!-- Соңы: ШАҒЫН ОРТАЛЫҚ -->
+
+</div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-school">№9 МЕКТЕП (DEBUG: kk)</div>
+                    <div class="logo-name">«Ахмет Байтұрсынұлы атындағы № 9 орта мектеп» КММ</div>
+                    <div class="social-links">
+
+                        <a href="https://t.me/school9_uralsk" aria-label="telegram">TELEGRAM</a>
+
+                        <a href="https://instagram.com/school9_uralsk" aria-label="instagram">INSTAGRAM</a>
+
+                        <a href="https://facebook.com/school9" aria-label="facebook">FACEBOOK</a>
+
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-nav-title="Быстрые ссылки">ЖЕДЕЛ СІЛТЕМЕЛЕР</h4>
+                    <ul>
+                        <li><a href="../" data-nav-title="Главная">Басты бет</a></li>
+                        <li><a href="../about/" data-nav-title="О школе">Мектеп туралы</a></li>
+                        <li><a href="../news/" data-nav-title="Новости">Жаңалықтар</a></li>
+                        <li><a href="../contacts/" data-nav-title="Контакты">Байланыс</a></li>
+                        <li><a href="https://egov.kz/cms/ru/articles/state_symbols" target="_blank" data-nav-title="Гос. символы">
+                            Мемлекеттік рәміздер
+                        </a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-nav-title="Документы">ҚҰЖАТТАР</h4>
+                    <ul>
+                        <li><a href="../documents/ustav/" data-nav-title="Устав школы">Мектеп жарғысы</a></li>
+                        <li><a href="../documents/license/" data-nav-title="Лицензия">Лицензия</a></li>
+                        <li><a href="../documents/admission/" data-nav-title="Правила приема">Қабылдау қағидалары</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-nav-title="Контакты">БАЙЛАНЫС</h4>
+                        <address>
+                            <p>📍 г. Петропавловск, ул. Победы, 5</p>
+                            <p>📞 +7 (7152) 37-11-24</p>
+                            <p>📞 Сенім телефоны: +7 (7152) 47-51-89</p>
+                            <p>✉️ school9@sqo.edu.kz</p>
+                            <p>🕒 Пн-Пт 8:00–19:00</p>
+                        </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 «Ахмет Байтұрсынұлы атындағы № 9 орта мектеп» КММ. Барлық құқықтар қорғалған.</div>
+                <div class="developer">Әзірлеген: IT-класс №9 Мектеп</div>
+            </div>
+        </div>
+    </footer>
+<script>
+    // Передаем переменную из MkDocs в глобальный JavaScript
+    var base_url = "..";
+</script>
+    
+        <script src="../assets/js/teachers_data.js"></script>
+    
+        <script src="../assets/js/main.js"></script>
+    
+        <script src="../assets/js/accessibility.js"></script>
+    
+        <script src="../assets/js/news_page.js"></script>
+    
+        <script src="../assets/js/mo_dynamic.js"></script>
+    
+        <script src="../assets/js/teachers_render.js"></script>
+    
+
+    
+
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-add AOS to standard components
+            const animatedElements = document.querySelectorAll('.hub-card, .info-card, .club-card, .news-card, .dept-card, .emergency-card, .gallery-item, .hours-card, .contact-item, .contact-info, .map-container');
+            animatedElements.forEach((el, index) => {
+                if (!el.hasAttribute('data-aos')) {
+                    el.setAttribute('data-aos', 'fade-up');
+                    el.setAttribute('data-aos-delay', (index % 4) * 100);
+                }
+            });
+
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 50
+            });
+        });
+    </script>
+</body>
+</html>

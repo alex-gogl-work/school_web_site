@@ -1,0 +1,187 @@
+/* =========================================
+   АДАПТИВНОСТЬ (MEDIA QUERIES)
+   ========================================= */
+@media (max-width: 1024px) {
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; }
+    .hero h1 { font-size: 2.8rem; }
+}
+
+@media (max-width: 992px) {
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .map-container {
+        min-height: 400px;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container,
+    .header-main-wrapper {
+        padding: 10px 0;
+    }
+    .logo-name,
+    .school-name-main {
+        display: none;
+    }
+    nav,
+    .main-nav {
+        display: none;
+    }
+    .header-actions .login-btn span,
+    .header-actions .login-btn {
+        display: none;
+    }
+    .mobile-menu-btn {
+        display: block;
+    }
+    .hero {
+        height: 70vh;
+        min-height: 500px;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    /* Все сетки переходят в 1 колонку */
+    .access-grid,
+    .news-grid,
+    .teachers-grid,
+    .clubs-grid,
+    .info-cards,
+    .resources-grid,
+    .council-grid,
+    .documents-grid,
+    .specialists-grid,
+    .hours-grid,
+    .departments-grid,
+    .emergency-grid,
+    .benefits-grid,
+    .registration-steps,
+    .legacy-grid,
+    .achievements-grid,
+    .directors-grid,
+    .mission-grid,
+    .infra-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-content,
+    .ahmet-content,
+    .modal-header {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .quote-nav {
+        position: relative;
+        top: auto;
+        transform: none;
+        margin: 20px 10px;
+        display: inline-block;
+    }
+    .quote-nav.prev {
+        left: 0;
+    }
+    .quote-nav.next {
+        right: 0;
+    }
+    .schedule-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .action-btn {
+        justify-content: center;
+    }
+    .bell-grid {
+        grid-template-columns: 1fr;
+    }
+    .news-filters,
+    .clubs-filters,
+    .filter-container,
+    .class-selector {
+        flex-direction: column;
+        align-items: center;
+    }
+    .filter-btn,
+    .news-filter-btn,
+    .class-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+    .event-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .event-date {
+        width: 100%;
+    }
+    .resource-item,
+    .document-card,
+    .specialist-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .resource-item:hover,
+    .document-card:hover,
+    .specialist-card:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
+    .hero h1 { font-size: 1.8rem; }
+    .page-hero h1 { font-size: 2.2rem; }
+    .calendar-grid {
+        gap: 5px;
+    }
+    .calendar-date {
+        padding: 10px 5px;
+        font-size: 14px;
+    }
+    .pagination {
+        flex-wrap: wrap;
+    }
+    .page-btn.prev,
+    .page-btn.next {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .quote-text {
+        font-size: 1.2rem;
+    }
+}

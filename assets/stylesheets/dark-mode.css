@@ -1,0 +1,148 @@
+body.dark-mode {
+    --deep-blue: #0b1120;       /* Very dark blue background */
+    --electric-cyan: #00bef0;
+    --bright-orange: #ff9d33;   /* Lighter orange for contrast */
+    --teal-accent: #00cfae;     /* Lighter teal */
+    --light-blue: #1e293b;      /* Slate blue for cards */
+    --white: #0f172a;           /* Dark slate for sections */
+    --light-gray: #1e293b;
+    --gray: #94a3b8;            /* Light gray text */
+    --dark-gray: #f8fafc;       /* White text */
+}
+
+/* Base dark mode adjustments */
+body.dark-mode {
+    background-color: var(--white);
+    color: var(--dark-gray);
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5 {
+    color: #f1f5f9;
+}
+
+body.dark-mode header {
+    background: #0f172a;
+    border-bottom: 1px solid #1e293b;
+}
+
+/* Dropdowns in header */
+body.dark-mode .dropdown-menu {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+body.dark-mode .dropdown-menu a {
+    color: #cbd5e1;
+}
+body.dark-mode .dropdown-menu a:hover {
+    background: #0f172a;
+    color: var(--electric-cyan);
+}
+
+/* Cards & Sections */
+body.dark-mode .hub-card, 
+body.dark-mode .info-card, 
+body.dark-mode .club-card,
+body.dark-mode .faq-item,
+body.dark-mode .tabs button,
+body.dark-mode .hours-card,
+body.dark-mode .dept-card,
+body.dark-mode .emergency-card,
+body.dark-mode .contact-item,
+body.dark-mode .support-bg,
+body.dark-mode .markdown-body pre,
+body.dark-mode .markdown-body code {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    color: #e2e8f0;
+}
+
+body.dark-mode .tabs button.active {
+    background-color: var(--electric-cyan);
+    color: #0f172a;
+    border-color: var(--electric-cyan);
+}
+
+body.dark-mode .news-card {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+body.dark-mode .news-title a { color: #f8fafc; }
+body.dark-mode .news-meta { color: #94a3b8; }
+
+body.dark-mode .footer-content, body.dark-mode footer, body.dark-mode .footer-bottom {
+    background: #020617;
+    border-top: 1px solid #1e293b;
+    color: #cbd5e1;
+}
+
+body.dark-mode .page-hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border-bottom: 1px solid #334155;
+}
+
+body.dark-mode .school-title .school-name-main {
+    color: #f8fafc;
+}
+
+body.dark-mode .hero-bg::after {
+    background: rgba(11, 17, 32, 0.85); /* Darker overlay for hero image */
+}
+
+/* =========================================
+   Яркие кнопки и контрастные ссылки
+   ========================================= */
+body.dark-mode .cta-button, 
+body.dark-mode .submit-btn, 
+body.dark-mode .btn {
+    background-color: var(--bright-orange);
+    color: #1e293b !important; /* Очень темный/почти черный цвет для максимального контраста на оранжевом */
+    border-color: var(--bright-orange);
+    font-weight: bold;
+}
+
+body.dark-mode .cta-button:hover, 
+body.dark-mode .submit-btn:hover, 
+body.dark-mode .btn:hover {
+    background-color: #ffb400; /* Более светлый оранжевый при наведении */
+    color: #000000 !important;
+    box-shadow: 0 0 15px rgba(255, 130, 0, 0.4); /* Эффект свечения */
+    transform: translateY(-2px);
+}
+
+body.dark-mode a {
+    color: var(--electric-cyan);
+}
+body.dark-mode a:hover {
+    color: var(--bright-orange);
+}
+
+/* Скрываем перепрограммирование цвета ссылок внутри специфичных блоков (header, menu, buttons),
+   чтобы не ломать их цвет cyan */
+body.dark-mode header a,
+body.dark-mode .header-actions a,
+body.dark-mode .dropdown-menu a,
+body.dark-mode .logo-school {
+    color: #cbd5e1;
+}
+body.dark-mode header a:hover,
+body.dark-mode .dropdown-menu a:hover {
+    color: var(--electric-cyan);
+}
+
+/* Инпуты и формы (Виртуальная приемная) */
+body.dark-mode .form-control {
+    background-color: #0f172a;
+    border-color: #334155;
+    color: #f1f5f9;
+}
+body.dark-mode .form-control:focus {
+    border-color: var(--bright-orange);
+    box-shadow: 0 0 0 3px rgba(255, 130, 0, 0.2);
+}
+
+/* Иконки хабов */
+body.dark-mode .hub-icon,
+body.dark-mode .contact-icon {
+    color: var(--electric-cyan);
+}

@@ -1,0 +1,313 @@
+/* =========================================
+   СТРАНИЦА "КРУЖКИ И СЕКЦИИ"
+   ========================================= */
+.clubs-section {
+    padding: 100px 0;
+}
+
+.clubs-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background: var(--light-gray);
+    border: none;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--deep-blue);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn.active {
+    background: var(--gradient-blue);
+    color: var(--white);
+}
+
+.filter-btn:hover:not(.active) {
+    background: var(--gray);
+}
+
+.clubs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.club-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.club-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.club-header {
+    padding: 25px 25px 15px;
+    position: relative;
+}
+
+.club-category {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px 12px;
+    background: var(--gradient-orange);
+    color: var(--white);
+    font-size: 12px;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.club-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--white);
+    background: var(--gradient-blue);
+}
+
+.club-header h3 {
+    color: var(--deep-blue);
+    margin-bottom: 10px;
+}
+
+.club-teacher {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.club-content {
+    padding: 0 25px 25px;
+}
+
+.club-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.club-schedule,
+.club-age {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
+
+.club-description {
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.club-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.club-places {
+    color: var(--electric-cyan);
+    font-weight: 600;
+}
+
+.club-btn {
+    padding: 8px 20px;
+    background: var(--gradient-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.club-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.club-btn.full {
+    background: var(--dark-gray);
+    cursor: not-allowed;
+}
+
+/* Преимущества */
+.benefits-section {
+    background: var(--light-gray);
+    padding: 100px 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 30px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: var(--gradient-teal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--white);
+}
+
+.benefit-card h3 {
+    color: var(--deep-blue);
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    color: var(--dark-gray);
+}
+
+/* Регистрация */
+.registration-section {
+    padding: 100px 0;
+}
+
+.registration-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.step-card {
+    text-align: center;
+    padding: 30px;
+    position: relative;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+    background: var(--gradient-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--white);
+}
+
+.step-card h3 {
+    color: var(--deep-blue);
+    margin-bottom: 15px;
+}
+
+.step-card p {
+    color: var(--dark-gray);
+}
+
+.step-card:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: var(--electric-cyan);
+}
+
+/* Слайдер достижений */
+.achievements-slider {
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievements-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s;
+}
+
+.achievement-slide {
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.achievement-year {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: var(--electric-cyan);
+    margin-bottom: 15px;
+}
+
+.achievement-slide h3 {
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.slider-dot.active {
+    background: var(--electric-cyan);
+    transform: scale(1.2);
+}

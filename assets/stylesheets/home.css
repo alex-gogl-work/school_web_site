@@ -1,0 +1,440 @@
+/* =========================================
+   ГЛАВНЫЙ ЭКРАН (HERO)
+   ========================================= */
+.hero {
+    position: relative;
+    height: 30vh;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(rgba(0, 55, 115, 0.7), rgba(0, 55, 115, 0.4)),
+        url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: var(--electric-cyan);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Общий стиль для героев внутренних страниц (из all_style.css) */
+.page-hero {
+    position: relative;
+    height: 30vh;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 80px;
+    background: linear-gradient(rgba(0, 55, 115, 0.9), rgba(0, 55, 115, 0.7));
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    text-align: center;
+    width: 100%;
+}
+
+.page-hero h1 {
+    font-size: 3rem;
+    color: var(--white);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    max-width: 100%;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* =========================================
+   БЫСТРЫЙ ДОСТУП
+   ========================================= */
+.quick-access {
+    padding: 100px 0;
+    background: var(--light-gray);
+}
+
+.access-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.access-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.access-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.access-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 25px;
+    background: var(--gradient-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--white);
+}
+
+.access-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--deep-blue);
+}
+
+.access-card p {
+    color: var(--dark-gray);
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   КАЛЕНДАРЬ СОБЫТИЙ
+   ========================================= */
+.events-calendar {
+    padding: 100px 0;
+    background: var(--light-gray);
+}
+
+.calendar-container {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 30px;
+    box-shadow: var(--shadow-sm);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.calendar-nav {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--deep-blue);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.calendar-nav:hover {
+    background: var(--light-gray);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.calendar-day {
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.calendar-date {
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.calendar-date:hover {
+    background: var(--light-gray);
+}
+
+.calendar-date.today {
+    background: var(--gradient-blue);
+    color: var(--white);
+}
+
+.calendar-date.event {
+    position: relative;
+}
+
+.calendar-date.event:after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--bright-orange);
+    border-radius: 50%;
+}
+
+.events-list {
+    border-top: 1px solid var(--gray);
+    padding-top: 30px;
+}
+
+/* =========================================
+   ГОСУДАРСТВЕННЫЕ УСЛУГИ
+   ========================================= */
+.gos-services {
+    padding: 100px 0;
+    background: var(--light-gray);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 30px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.service-card h3 {
+    color: var(--deep-blue);
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   ПОСЛЕДНИЕ НОВОСТИ (главная страница, из all_style.css)
+   ========================================= */
+.latest-news {
+    padding: 100px 0; /*100px*/
+}
+
+.section-header {
+    /*display: flex;*/
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--electric-cyan);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.view-all:hover {
+    gap: 12px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+	/*max-width: 1220px;  Установите значение, равное вашей главной сетке */
+    /*margin: 0 auto;     Центрируем 
+    /*width: 100%;*/
+}
+
+.news-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid var(--gray);
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--electric-cyan);
+}
+
+.news-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--gray);
+    overflow: hidden;
+}
+
+.news-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.news-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--gradient-blue);
+    color: var(--white);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+.news-card .news-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.news-card .news-date {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.news-card h3 {
+    font-size: 1.25rem;
+    color: var(--deep-blue);
+    margin-bottom: 12px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    overflow: hidden;
+}
+
+.news-card p {
+    color: var(--dark-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--bright-orange);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.read-more:hover {
+    gap: 12px;
+    color: var(--electric-cyan);
+}
+.popular-slide {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.popular-slide:hover {
+    transform: scale(0.98); /* Легкий эффект нажатия */
+}
+
+.popular-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 69, 0, 0.9);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.popular-image {
+    position: relative;
+    height: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
