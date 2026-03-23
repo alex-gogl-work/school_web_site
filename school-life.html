@@ -401,6 +401,23 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
     // Передаем переменную из MkDocs в глобальный JavaScript
     var base_url = ".";
+
+    // Исправляем пути к картинкам для GitHub Pages (подпапка school_web_site)
+    // MkDocs генерирует относительные пути, которые ломаются в подпапках /ru/, /ru/mo/ и т.д.
+    document.addEventListener('DOMContentLoaded', function() {
+        var SITE_ROOT = 'https://alex-gogl-work.github.io/school_web_site/';
+        document.querySelectorAll('img[src]').forEach(function(img) {
+            // Если картинка не загрузилась или src содержит assets/ но не абсолютный путь
+            var src = img.getAttribute('src');
+            if (src && !src.startsWith('http') && !src.startsWith('//') && src.indexOf('assets/') !== -1) {
+                // Нормализуем путь: убираем ../ и оставляем только часть начиная с assets/
+                var assetsIndex = src.indexOf('assets/');
+                if (assetsIndex !== -1) {
+                    img.setAttribute('src', SITE_ROOT + src.substring(assetsIndex));
+                }
+            }
+        });
+    });
 </script>
     
         <script src="assets/js/teachers_data.js"></script>
