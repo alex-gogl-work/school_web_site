@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Официальный сайт КГУ Средняя школа №9 имени А. Байтурсынулы">
+    <title>Жизнь школы - КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы»</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+
+   
+        <link rel="stylesheet" href="../assets/stylesheets/style.css">
+    
+        <link rel="stylesheet" href="../assets/stylesheets/news_page.css">
+    
+
+    
+    
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="">
+<header>
+    <div class="container header-main-wrapper">
+        <div class="header-logo-section">
+    <a href="../..">
+        <img id="main-logo" 
+             src="../assets/images/logo/logo_kaz.png" 
+             data-logo-ru="../assets/images/logo/logo_rus.png" 
+             data-logo-kk="../assets/images/logo/logo_kaz.png" 
+             alt="Логотип школы">
+    </a>
+</div>
+	<div class="header-content-section">
+		<div class="header-top-row">
+        <div class="school-title">
+                    <div class="school-name-main">
+                         КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы»
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <button id="toggle-dark-mode" class="accessibility-btn" title="Темная тема (Dark Mode)">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="toggle-bvi" class="accessibility-btn" title="Версия для слабовидящих">
+                        <i class="fas fa-eye"></i> <span>Доступность</span>
+                    </button>
+                    
+                    <div class="lang-switcher">
+                        
+                        
+                        
+                        
+                            
+                        
+
+                        
+                            
+                            
+                                
+                            
+
+                            <a href="../ru/school-life.html" 
+                               class="lang-btn active" 
+                               data-lang="ru">
+                               RU
+                            </a>
+                        
+                            
+                            
+
+                            <a href="../school-life.html" 
+                               class="lang-btn " 
+                               data-lang="kk">
+                               KK
+                            </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    
+                        
+                            <li class="menu">
+                                <a href="index.html" 
+                                    
+                                   data-nav-title="Главная">Главная</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="about.html" 
+                                    
+                                   data-nav-title="О школе">О школе</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="educational.html" 
+                                    
+                                   data-nav-title="Учебный процесс">Учебный процесс</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="school-life.html" 
+                                   class="active" 
+                                   data-nav-title="Жизнь школы">Жизнь школы</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="official.html" 
+                                    
+                                   data-nav-title="Официальный раздел">Официальный раздел</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="news.html" 
+                                    
+                                   data-nav-title="Новости">Новости</a>
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+        </div>
+</div>
+</header>
+
+    <main>
+        <style>
+/* Стили для супер-хаба */
+.hub-section { padding: 60px 0; }
+.hub-section.bg-light { background-color: #f8f9fa; border-radius: 20px; margin: 40px 0; padding: 60px 40px; }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
+.hub-card { background: #fff; border-radius: 15px; padding: 30px 20px; text-align: center; text-decoration: none !important; color: inherit; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border: 1px solid transparent; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; position: relative; overflow: hidden; }
+.hub-card:hover { transform: translateY(-7px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: var(--md-primary-fg-color, #1a73e8); }
+.hub-icon { font-size: 2.5rem; color: var(--md-primary-fg-color, #1a73e8); margin-bottom: 20px; transition: transform 0.3s ease; }
+.hub-card:hover .hub-icon { transform: scale(1.1); }
+.hub-card h3 { margin: 0 0 10px 0; font-size: 1.25rem; color: #333; }
+.hub-card p { margin: 0; font-size: 0.9rem; color: #666; line-height: 1.4; }
+.hub-arrow { margin-top: 20px; color: var(--md-primary-fg-color, #1a73e8); font-weight: bold; font-size: 0.9rem; opacity: 0; transform: translateX(-10px); transition: all 0.3s ease; }
+.hub-card:hover .hub-arrow { opacity: 1; transform: translateX(0); }
+
+/* Стили для Парламента */
+.parliament-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.council-member { background: white; padding: 20px; border-radius: 15px; text-align: center; width: 250px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.member-photo { width: 80px; height: 80px; background: #eee; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #ccc; }
+
+/* Стили для FAQ */
+.faq-container { margin: 0 auto; }
+.faq-item { background: white; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); overflow: hidden; cursor: pointer; }
+.faq-question { padding: 20px; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: #333; }
+.faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease; color: #666; }
+.faq-item.active .faq-answer { padding: 0 20px 20px; max-height: 500px; }
+.faq-item.active .faq-question i { transform: rotate(180deg); }
+.faq-question i { transition: transform 0.3s ease; }
+
+/* Стили вкладок */
+.tabs-container { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 20px; margin-bottom: 20px; background: #fff; padding: 15px 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.tab-btn { background: none; border: none; padding: 12px 24px; font-size: 1.1rem; font-weight: 600; color: #777; cursor: pointer; transition: all 0.3s ease; border-radius: 8px; display: flex; align-items: center; gap: 8px; }
+.tab-btn:hover { background: #f0f4f8; color: var(--md-primary-fg-color, #1a73e8); }
+.tab-btn.active { background: var(--md-primary-fg-color, #1a73e8); color: white; box-shadow: 0 4px 15px rgba(26, 115, 232, 0.3); }
+.tab-content { display: none; animation: fadeInTab 0.4s ease-out forwards; }
+.tab-content.active { display: block; }
+@keyframes fadeInTab { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+
+<section class="page-hero">
+    <div class="container page-hero-content">
+        <h1>ШКОЛЬНАЯ ЖИЗНЬ</h1>
+        <p>Единый портал для учеников и их родителей</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="tabs-container">
+        <button class="tab-btn active" data-tab="tab-parents"><i class="fas fa-user-friends"></i> Родителям</button>
+        <button class="tab-btn" data-tab="tab-students"><i class="fas fa-graduation-cap"></i> Ученикам</button>
+        <button class="tab-btn" data-tab="tab-info"><i class="fas fa-info-circle"></i> Парламент и FAQ</button>
+    </div>
+
+    <!-- Вкладка Родителям -->
+    <div id="tab-parents" class="tab-content active">
+        <div class="hub-section">
+            <div class="hub-grid">
+                <a href="/ru/admission/" class="hub-card">
+                    <div class="hub-icon"><i class="fas fa-user-plus"></i></div>
+                    <h3>Прием в школу</h3>
+                    <p>Правила приема в 1-й и другие классы, список документов</p>
+                    <div class="hub-arrow">Перейти &rarr;</div>
+                </a>
+                <a href="/ru/parents-first-grader/" class="hub-card">
+                    <div class="hub-icon"><i class="fas fa-child"></i></div>
+                    <h3>Первокласснику</h3>
+                    <p>Памятка для родителей и советы по адаптации</p>
+                    <div class="hub-arrow">Перейти &rarr;</div>
+                </a>
+                <a href="/ru/meals/" class="hub-card">
+                    <div class="hub-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Школьное питание</h3>
+                    <p>Ежедневное меню, график столовой и контроль качества</p>
+                    <div class="hub-arrow">Перейти &rarr;</div>
+                </a>
+                <a href="/ru/uniform/" class="hub-card">
+                    <div class="hub-icon"><i class="fas fa-tshirt"></i></div>
+                    <h3>Школьная форма</h3>
+                    <p>Требования к внешнему виду и стандарты одежды</p>
+                    <div class="hub-arrow">Перейти &rarr;</div>
+                </a>
+                <a href="https://www.bilimclass.kz/login" target="_blank" class="hub-card" style="border-bottom: 3px solid #4caf50;">
+                    <div class="hub-icon" style="color: #4caf50;"><i class="fas fa-laptop-house"></i></div>
+                    <h3>Электронный дневник</h3>
+                    <p>Вход в систему Kundelik.kz для проверки оценок</p>
+                    <div class="hub-arrow" style="color: #4caf50;">Войти &rarr;</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Вкладка Ученикам -->
+    <div id="tab-students" class="tab-content">
+        <div class="hub-section">
+            <div class="hub-grid">
+                <a href="/ru/educational/#tab-schedule" class="hub-card">
+                    <div class="hub-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Расписание занятий</h3>
+                    <p>График уроков и звонков для всех классов</p>
+                    <div class="hub-arrow">Перейти &rarr;</div>
+                </a>
+                <a href="/ru/clubs/" class="hub-card">
+                    <div class="hub-icon"><i class="fas fa-running"></i></div>
+                    <h3>Кружки и секции</h3>
+                    <p>Спорт, творчество, наука и IT-направления</p>
+                    <div class="hub-arrow">Перейти &rarr;</div>
+                </a>
+                <a href="/ru/safety/" class="hub-card">
+                    <div class="hub-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Безопасность</h3>
+                    <p>Правила поведения, ПДД и действия при ЧС</p>
+                    <div class="hub-arrow">Перейти &rarr;</div>
+                </a>
+                <a href="/ru/reading-school/" class="hub-card">
+                    <div class="hub-icon"><i class="fas fa-book-open"></i></div>
+                    <h3>Читающая школа</h3>
+                    <p>Мероприятия библиотеки и рекомендуемая литература</p>
+                    <div class="hub-arrow">Перейти &rarr;</div>
+                </a>
+                <a href="/ru/ent/" class="hub-card">
+                    <div class="hub-icon"><i class="fas fa-pen-nib"></i></div>
+                    <h3>Подготовка к ЕНТ</h3>
+                    <p>Материалы и пробные тесты для выпускников</p>
+                    <div class="hub-arrow">Перейти &rarr;</div>
+                </a>
+                <a href="/ru/career-guidance/" class="hub-card">
+                    <div class="hub-icon"><i class="fas fa-compass"></i></div>
+                    <h3>Профориентация</h3>
+                    <p>Выбор будущей профессии и тестирование</p>
+                    <div class="hub-arrow">Перейти &rarr;</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Вкладка Инфо -->
+    <div id="tab-info" class="tab-content">
+        <div class="hub-section">
+            <h2 class="section-title">ШКОЛЬНЫЙ ПАРЛАМЕНТ</h2>
+            <p style="text-align: center; margin-bottom: 40px; color: #666;">Орган ученического самоуправления, защищающий права учащихся.</p>
+            <div class="parliament-grid">
+                <div class="council-member">
+                    <div class="member-photo"><i class="fas fa-user"></i></div>
+                    <h3 class="member-name">Алишер Қайратұлы</h3>
+                    <div style="color: var(--md-primary-fg-color); font-weight: bold; margin-bottom: 10px;">Президент школы</div>
+                    <p style="font-size: 0.9rem; color: #666;">10 класс</p>
+                </div>
+                <!-- остальные члены убрал для краткости, оставим одного или пару -->
+                <div class="council-member">
+                    <div class="member-photo"><i class="fas fa-user"></i></div>
+                    <h3 class="member-name">Аружан Бекова</h3>
+                    <div style="color: var(--md-primary-fg-color); font-weight: bold; margin-bottom: 10px;">Министр культуры</div>
+                    <p style="font-size: 0.9rem; color: #666;">10 класс</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hub-section bg-light">
+            <h2 class="section-title">ЧАСТЫЕ ВОПРОСЫ (FAQ)</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question"><span>Обязательна ли школьная форма?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>Да, обязательна. Образец и требования опубликованы в разделе "Школьная форма".</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Когда проходят родительские собрания?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>Общешкольное собрание — раз в четверть, классные — раз в месяц.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Как зайти в электронный дневник?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>Зайдите через портал Kundelik.kz. Логин и пароль выдает классный руководитель.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // FAQ
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) otherItem.classList.remove('active');
+            });
+            item.classList.toggle('active');
+        });
+    });
+
+    // Вкладки (Tabs)
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+
+            btn.classList.add('active');
+            document.getElementById(btn.dataset.tab).classList.add('active');
+        });
+    });
+});
+</script>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-school">№9 МЕКТЕП (DEBUG: ru)</div>
+                    <div class="logo-name">КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы»</div>
+                    <div class="social-links">
+
+                        <a href="https://t.me/school9_uralsk" aria-label="telegram">TELEGRAM</a>
+
+                        <a href="https://instagram.com/school9_uralsk" aria-label="instagram">INSTAGRAM</a>
+
+                        <a href="https://facebook.com/school9" aria-label="facebook">FACEBOOK</a>
+
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-nav-title="Быстрые ссылки">БЫСТРЫЕ ССЫЛКИ</h4>
+                    <ul>
+                        <li><a href="../" data-nav-title="Главная">Главная</a></li>
+                        <li><a href="../about/" data-nav-title="О школе">О школе</a></li>
+                        <li><a href="../news/" data-nav-title="Новости">Новости</a></li>
+                        <li><a href="../contacts/" data-nav-title="Контакты">Контакты</a></li>
+                        <li><a href="https://egov.kz/cms/ru/articles/state_symbols" target="_blank" data-nav-title="Гос. символы">
+                            Государственные символы
+                        </a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-nav-title="Документы">ДОКУМЕНТЫ</h4>
+                    <ul>
+                        <li><a href="../documents/ustav/" data-nav-title="Устав школы">Устав школы</a></li>
+                        <li><a href="../documents/license/" data-nav-title="Лицензия">Лицензия</a></li>
+                        <li><a href="../documents/admission/" data-nav-title="Правила приема">Правила приема</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-nav-title="Контакты">КОНТАКТЫ</h4>
+                        <address>
+                            <p>📍 г. Петропавловск, ул. Победы, 5</p>
+                            <p>📞 +7 (7152) 37-11-24</p>
+                            <p>📞 Телефон доверия: +7 (7152) 47-51-89</p>
+                            <p>✉️ school9@sqo.edu.kz</p>
+                            <p>🕒 Пн-Пт 8:00–19:00</p>
+                        </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы». Все права защищены.</div>
+                <div class="developer">Разработано: IT-класс №9 Мектеп</div>
+            </div>
+        </div>
+    </footer>
+<script>
+    // Передаем переменную из MkDocs в глобальный JavaScript
+    var base_url = "..";
+</script>
+    
+        <script src="../assets/js/teachers_data.js"></script>
+    
+        <script src="../assets/js/main.js"></script>
+    
+        <script src="../assets/js/accessibility.js"></script>
+    
+        <script src="../assets/js/news_page.js"></script>
+    
+        <script src="../assets/js/mo_dynamic.js"></script>
+    
+        <script src="../assets/js/teachers_render.js"></script>
+    
+
+    
+
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-add AOS to standard components
+            const animatedElements = document.querySelectorAll('.hub-card, .info-card, .club-card, .news-card, .dept-card, .emergency-card, .gallery-item, .hours-card, .contact-item, .contact-info, .map-container');
+            animatedElements.forEach((el, index) => {
+                if (!el.hasAttribute('data-aos')) {
+                    el.setAttribute('data-aos', 'fade-up');
+                    el.setAttribute('data-aos-delay', (index % 4) * 100);
+                }
+            });
+
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 50
+            });
+        });
+    </script>
+</body>
+</html>

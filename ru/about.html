@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Официальный сайт КГУ Средняя школа №9 имени А. Байтурсынулы">
+    <title>О школе - КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы»</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+
+   
+        <link rel="stylesheet" href="../assets/stylesheets/style.css">
+    
+        <link rel="stylesheet" href="../assets/stylesheets/news_page.css">
+    
+
+    
+    
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="">
+<header>
+    <div class="container header-main-wrapper">
+        <div class="header-logo-section">
+    <a href="../..">
+        <img id="main-logo" 
+             src="../assets/images/logo/logo_kaz.png" 
+             data-logo-ru="../assets/images/logo/logo_rus.png" 
+             data-logo-kk="../assets/images/logo/logo_kaz.png" 
+             alt="Логотип школы">
+    </a>
+</div>
+	<div class="header-content-section">
+		<div class="header-top-row">
+        <div class="school-title">
+                    <div class="school-name-main">
+                         КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы»
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <button id="toggle-dark-mode" class="accessibility-btn" title="Темная тема (Dark Mode)">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="toggle-bvi" class="accessibility-btn" title="Версия для слабовидящих">
+                        <i class="fas fa-eye"></i> <span>Доступность</span>
+                    </button>
+                    
+                    <div class="lang-switcher">
+                        
+                        
+                        
+                        
+                            
+                        
+
+                        
+                            
+                            
+                                
+                            
+
+                            <a href="../ru/about.html" 
+                               class="lang-btn active" 
+                               data-lang="ru">
+                               RU
+                            </a>
+                        
+                            
+                            
+
+                            <a href="../about.html" 
+                               class="lang-btn " 
+                               data-lang="kk">
+                               KK
+                            </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    
+                        
+                            <li class="menu">
+                                <a href="index.html" 
+                                    
+                                   data-nav-title="Главная">Главная</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="about.html" 
+                                   class="active" 
+                                   data-nav-title="О школе">О школе</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="educational.html" 
+                                    
+                                   data-nav-title="Учебный процесс">Учебный процесс</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="school-life.html" 
+                                    
+                                   data-nav-title="Жизнь школы">Жизнь школы</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="official.html" 
+                                    
+                                   data-nav-title="Официальный раздел">Официальный раздел</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="news.html" 
+                                    
+                                   data-nav-title="Новости">Новости</a>
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+        </div>
+</div>
+</header>
+
+    <main>
+        <style>
+/* Стили для вкладок */
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-bottom: 40px;
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 10;
+}
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #777;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.tab-btn:hover {
+    background: #f0f4f8;
+    color: var(--md-primary-fg-color, #1a73e8);
+}
+.tab-btn.active {
+    background: var(--md-primary-fg-color, #1a73e8);
+    color: white;
+    box-shadow: 0 4px 15px rgba(26, 115, 232, 0.3);
+}
+.tab-content {
+    display: none;
+    animation: fadeInTab 0.4s ease-out forwards;
+}
+.tab-content.active {
+    display: block;
+}
+@keyframes fadeInTab {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<section class="page-hero">
+    <div class="container page-hero-content">
+        <h1>О ШКОЛЕ</h1>
+        <p>Наша школа – это качественный образовательный центр и пространство для развития молодёжи</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="tabs-container">
+        <button class="tab-btn active" data-tab="tab-about"><i class="fas fa-info-circle"></i> Общая информация</button>
+        <button class="tab-btn" data-tab="tab-history"><i class="fas fa-history"></i> История школы</button>
+        <button class="tab-btn" data-tab="tab-baitursynov"><i class="fas fa-user-graduate"></i> А. Байтурсынулы</button>
+        <button class="tab-btn" data-tab="tab-contacts"><i class="fas fa-address-book"></i> Контакты</button>
+    </div>
+
+    <!-- ТАБ: ОБЩАЯ ИНФОРМАЦИЯ -->
+    <div id="tab-about" class="tab-content active">
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Школа №9 – центр образования и воспитания</h2>
+                        <p>Средняя школа №9 имени Ахмета Байтурсынулы – образовательный центр, сочетающий многолетние традиции в сфере образования с современными инновациями. Школа была основана в 1988 году.</p>
+                        <p>Мы предлагаем учащимся гораздо больше, чем просто академическое образование. Наша цель – раскрыть потенциал каждого ученика и подготовить их к успешной жизни.</p>
+                        <p>В нашей школе учатся в безопасной, поддерживающей и вдохновляющей среде, где они могут развивать свои таланты и осваивать новые навыки.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="assets/images/school-building.jpg" alt="Здание школы №9">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-vision">
+            <div class="container">
+                <h2 class="section-title">НАША МИССИЯ И ВИДЕНИЕ</h2>
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <div class="mission-icon"><i class="fas fa-bullseye"></i></div>
+                        <h3>НАША МИССИЯ</h3>
+                        <p>Воспитание образованных граждан, ответственных за будущее Казахстана, критически мыслящих и обладающих моральными ценностями.</p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon" style="background: var(--gradient-orange);"><i class="fas fa-eye"></i></div>
+                        <h3>НАШЕ ВИДЕНИЕ</h3>
+                        <p>Создание инновационной модели образования, где каждый ученик может полностью реализовать свои возможности.</p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon" style="background: var(--gradient-teal);"><i class="fas fa-heart"></i></div>
+                        <h3>НАШИ ЦЕННОСТИ</h3>
+                        <p>Качественное образование, честность, уважение, инновации, командная работа и сохранение культурного наследия.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <h2 class="section-title" style="color: var(--white);">ШКОЛА В ЦИФРАХ</h2>
+                <div class="stats-grid">
+                    <div class="stat-item"><div class="stat-number">35+</div><div class="stat-label">ЛЕТ ОПЫТА</div></div>
+                    <div class="stat-item"><div class="stat-number">850+</div><div class="stat-label">УЧЕНИКОВ</div></div>
+                    <div class="stat-item"><div class="stat-number">65</div><div class="stat-label">УЧИТЕЛЕЙ</div></div>
+                    <div class="stat-item"><div class="stat-number">40+</div><div class="stat-label">КРУЖКОВ</div></div>
+                    <div class="stat-item"><div class="stat-number">95%</div><div class="stat-label">ПРОХОЖДЕНИЕ ЕНТ</div></div>
+                    <div class="stat-item"><div class="stat-number">150+</div><div class="stat-label">ПОБЕДИТЕЛЕЙ ОЛИМПИАД</div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="infrastructure">
+            <div class="container">
+                <h2 class="section-title">ИНФРАСТРУКТУРА ШКОЛЫ</h2>
+                <div class="infra-grid">
+                    <div class="infra-item"><div class="infra-icon"><i class="fas fa-desktop"></i></div><h3>КОМПЬЮТЕРНЫЕ КЛАССЫ</h3><p>4 современных компьютерных класса, высокоскоростной интернет</p></div>
+                    <div class="infra-item"><div class="infra-icon"><i class="fas fa-flask"></i></div><h3>ЛАБОРАТОРИИ</h3><p>Лаборатории химии, физики, биологии</p></div>
+                    <div class="infra-item"><div class="infra-icon"><i class="fas fa-book"></i></div><h3>БИБЛИОТЕКА</h3><p>Более 20 000 книг, электронный фонд</p></div>
+                    <div class="infra-item"><div class="infra-icon"><i class="fas fa-dumbbell"></i></div><h3>СПОРТЗАЛЫ</h3><p>2 спортзала, стадион, спортивная площадка</p></div>
+                    <div class="infra-item"><div class="infra-icon"><i class="fas fa-music"></i></div><h3>АКТОВЫЙ ЗАЛ</h3><p>Актовый зал на 400 мест, современное оборудование</p></div>
+                    <div class="infra-item"><div class="infra-icon"><i class="fas fa-utensils"></i></div><h3>СТОЛОВАЯ</h3><p>Современная столовая на 250 мест</p></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ТАБ: ИСТОРИЯ ШКОЛЫ -->
+    <div id="tab-history" class="tab-content">
+        <section class="history-section">
+            <div class="container">
+                <h2 class="section-title">НАША ИСТОРИЯ</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="year">1988</span>
+                            <h3>ОСНОВАНИЕ ШКОЛЫ</h3>
+                            <p>Школа открылась как средняя школа №9. Первый директор - Айгуль Шакирова.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="year">1995</span>
+                            <h3>ПРИСВОЕНО ИМЯ АХМЕТА БАЙТУРСЫНУЛЫ</h3>
+                            <p>Школе присвоено имя казахского просветителя, поэта и общественного деятеля Ахмета Байтурсынулы.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="year">2000</span>
+                            <h3>ТЕХНОЛОГИЧЕСКОЕ ОБНОВЛЕНИЕ</h3>
+                            <p>Открыт первый компьютерный класс, внедрены современные учебные программы.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="year">2008</span>
+                            <h3>20-ЛЕТНИЙ ЮБИЛЕЙ</h3>
+                            <p>Школа отметила 20-летний юбилей. Выпущено более 2000 выпускников.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="year">2015</span>
+                            <h3>ПЕРЕЕЗД В НОВОЕ ЗДАНИЕ</h3>
+                            <p>Переезд в новое трехэтажное здание с современным оборудованием.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="year">2020</span>
+                            <h3>ЦИФРОВАЯ ТРАНСФОРМАЦИЯ</h3>
+                            <p>Внедрены электронный журнал, онлайн-платформы обучения, STEM-лаборатории.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="year">2023</span>
+                            <h3>35-ЛЕТНИЙ ЮБИЛЕЙ</h3>
+                            <p>Школа отметила 35-летний юбилей. Признана одной из лучших школ города.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="directors-section">
+            <div class="container">
+                <h2 class="section-title">ДИРЕКТОРА ШКОЛЫ</h2>
+                <div class="directors-grid">
+                    <div class="director-card">
+                        <div class="director-image">
+                            <img src="assets/images/history/director_1.png" alt="Айгүл Шәкірова">
+                        </div>
+                        <div class="director-info">
+                            <div class="director-period">1988-2000</div>
+                            <h3 class="director-name">Айгүл Шәкірова</h3>
+                            <p>Основатель школы, внедрила инновационные методы образования в первые годы независимости.</p>
+                        </div>
+                    </div>
+                    <div class="director-card">
+                        <div class="director-image">
+                            <img src="assets/images/history/director_2.webp" alt="Қанат Жұмабаев">
+                        </div>
+                        <div class="director-info">
+                            <div class="director-period">2000-2012</div>
+                            <h3 class="director-name">Қанат Жұмабаев</h3>
+                            <p>Усовершенствовал технологическое оснащение, установил прочные международные связи.</p>
+                        </div>
+                    </div>
+                    <div class="director-card">
+                        <div class="director-image">
+                            <img src="assets/images/history/director_3.webp" alt="Аленова Гүлден Жақсылыққызы">
+                        </div>
+                        <div class="director-info">
+                            <div class="director-period">2012-настоящее время</div>
+                            <h3 class="director-name">Аленова Гүлден Жақсылыққызы</h3>
+                            <p>Возглавила цифровую трансформацию, обеспечив школе лидирующие позиции в регионе.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="achievements-section">
+            <div class="container">
+                <h2 class="section-title">ИСТОРИЧЕСКИЕ ДОСТИЖЕНИЯ</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                        <h3>ГОРОДСКОЕ ПЕРВЕНСТВО</h3>
+                        <p>1995-2023: 28 раз лучшая школа города</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>ВЫПУСКНИКИ</h3>
+                        <p>Более 3500 выпускников, включая 120 золотых медалистов</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-medal"></i></div>
+                        <h3>ПОБЕДИТЕЛИ ОЛИМПИАД</h3>
+                        <p>Более 150 победителей республиканских и международных олимпиад</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-award"></i></div>
+                        <h3>УЧИТЕЛЯ</h3>
+                        <p>45 обладателей Почетной грамоты, 15 лучших работников образования</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-building"></i></div>
+                        <h3>ИНФРАСТРУКТУРА</h3>
+                        <p>В 2015 году переехали в новое здание, инвестиции 2 млрд тенге</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-handshake"></i></div>
+                        <h3>МЕЖДУНАРОДНЫЕ СВЯЗИ</h3>
+                        <p>Сотрудничество с 5 странами, программы обмена студентами</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ТАБ: А. БАЙТУРСЫНУЛЫ -->
+    <div id="tab-baitursynov" class="tab-content">
+        <section class="ahmet-section">
+            <div class="container">
+                <div class="ahmet-content">
+                    <div class="ahmet-portrait">
+                        <div class="ahmet-image">
+                            <img src="assets/images/ahmet-baytursynuly.jpg" alt="Черно-белый исторический портрет казахского просветителя Ахмета Байтурсынулы в строгом костюме">
+                        </div>
+                        <div class="ahmet-years">
+                            <h3>1873-1937</h3>
+                            <p>Годы жизни</p>
+                        </div>
+                    </div>
+                    <div class="ahmet-info">
+                        <h2>ВЕЛИКИЙ КАЗАХСКИЙ ПРОСВЕТИТЕЛЬ</h2>
+                        <p>Ахмет Байтурсынулы (1873-1937) – выдающийся казахский просветитель, чьи труды охватывают лингвистику, литературу, педагогику, журналистику и политику.</p>
+                        <p>В 1912 году он реформировал казахскую письменность на основе арабской графики, создав «Төте жазу». Он исключил ненужные арабские буквы и добавил символы для специфических казахских гласных. Этот алфавит позволил быстро обучить грамоте огромное количество людей и до сих пор используется казахами в Китае, Афганистане и Иране.</p>
+                        <p>Ученый первым выделил закон сингармонизма как основу фонологического строя казахского языка. Он также с нуля разработал грамматическую терминологию, введя такие понятия, как зат есім (имя существительное), етістік (глагол), үтір (запятая) и нүкте (точка).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="achievements">
+            <div class="container">
+                <h2 class="section-title">ОСНОВНЫЕ ДОСТИЖЕНИЯ</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-language"></i></div>
+                        <h3>ЛИНГВИСТИКА</h3>
+                        <ul>
+                            <li>Реформа письменности на основе арабской графики («Төте жазу»).</li>
+                            <li>Создание современной казахской лингвистической терминологии.</li>
+                        </ul>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-book"></i></div>
+                        <h3>УЧЕБНИКИ</h3>
+                        <ul>
+                            <li>Автор первого казахского букваря «Оқу құралы» (1912).</li>
+                            <li>Создатель фундаментального курса грамматики «Тіл-құрал».</li>
+                        </ul>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-newspaper"></i></div>
+                        <h3>ПЕЧАТЬ И ПОЛИТИКА</h3>
+                        <ul>
+                            <li>Основание и редактирование первой общенациональной газеты «Қазақ» (1913–1918).</li>
+                            <li>Соавтор проекта программы партии «Алаш».</li>
+                        </ul>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-pen-nib"></i></div>
+                        <h3>ЛИТЕРАТУРОВЕДЕНИЕ</h3>
+                        <ul>
+                            <li>Создание первого научного труда по теории казахской литературы «Әдебиет танытқыш» (1926).</li>
+                            <li>Первая глубокая научная оценка творчества Абая (1913).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="alash-section bg-light">
+            <div class="container">
+                <h2 class="section-title">ПОЛИТИЧЕСКАЯ ДЕЯТЕЛЬНОСТЬ И ПАРТИЯ «АЛАШ»</h2>
+                <div class="alash-content">
+                    <div class="alash-image-wrapper" style="margin-bottom: 25px;">
+                        <img src="assets/images/alash-qazaq.jpg" alt="Архивный выпуск общенациональной газеты Қазақ и историческое фото лидеров партии Алаш" style="max-width: 100%; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    </div>
+
+                    <p>Ахмет Байтурсынулы был одним из главных идеологов национально-освободительного движения и одним из создателей партии «Алаш» и правительства «Алаш-Орда». Вместе с Алиханом Букейхановым и Миржакипом Дулатовым он основал легендарную газету «Қазақ», ставшую «глазами, ушами и языком нации».</p>
+                    <p>Он был одним из авторов Каркаралинской петиции (1905), а позже, в составе Казревкома, активно участвовал в установлении границ Казахстана, добившись включения Костанайской области в состав республики.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="works-section">
+            <div class="container">
+                <h2 class="section-title">ТВОРЧЕСКОЕ И НАУЧНОЕ НАСЛЕДИЕ</h2>
+                <div class="works-tabs">
+                    <button class="tab-btn active" data-tab="poetry">ЛИТЕРАТУРА</button>
+                    <button class="tab-btn" data-tab="textbooks">УЧЕБНИКИ</button>
+                    <button class="tab-btn" data-tab="science">НАУКА И ФОЛЬКЛОР</button>
+                </div>
+                <div class="tab-content active" id="poetry">
+                    <div class="works-list">
+                        <div class="work-item"><div class="work-year">1909</div><h3>«Қырық мысал»</h3><p>Творческие переводы басен Крылова, адаптированные к казахским реалиям для критики колониальной политики.</p></div>
+                        <div class="work-item"><div class="work-year">1911</div><h3>«Маса»</h3><p>Поэтический сборник, призывавший народ к просвещению и пробуждению от «сна невежества».</p></div>
+                    </div>
+                </div>
+                <div class="tab-content" id="textbooks">
+                    <div class="works-list">
+                        <div class="work-item"><div class="work-year">1912</div><h3>«Оқу құралы»</h3><p>Первый казахский букварь, благодаря которому дети могли научиться читать и писать за 6–8 месяцев.</p></div>
+                        <div class="work-item"><div class="work-year">1914–1928</div><h3>«Тіл-құрал»</h3><p>Фундаментальное трехтомное исследование по фонетике, морфологии и синтаксису.</p></div>
+                        <div class="work-item"><div class="work-year">1920</div><h3>«Баяншы»</h3><p>Методическое руководство для учителей по обучению грамоте.</p></div>
+                    </div>
+                </div>
+                <div class="tab-content" id="science">
+                    <div class="works-list">
+                        <div class="work-item"><div class="work-year">1923</div><h3>«Ер Сайын»</h3><p>Опубликованный образец народного творчества и героического эпоса.</p></div>
+                        <div class="work-item"><div class="work-year">1926</div><h3>«Әдебиет танытқыш»</h3><p>Первый научный труд по теории казахской литературы и систематизации жанров.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quotes-section">
+            <div class="container">
+                <h2 class="section-title" style="color: var(--white);">МУДРЫЕ СЛОВА</h2>
+                <div class="quote-slider">
+                    <div class="quote-item active">
+                        <div class="quote-text">«Мектептің жаны – мұғалім»<br><span class="quote-ru">«Учитель — душа школы»</span></div>
+                        <div class="quote-author">Ахмет Байтұрсынұлы</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="legacy-section">
+            <div class="container">
+                <h2 class="section-title">МАСШТАБЫ НАСЛЕДИЯ</h2>
+                <p class="text-center mb-4">Имя Ахмета Байтурсынулы носят десятки организаций и объектов по всему Казахстану.</p>
+                <div class="legacy-grid">
+                    <div class="legacy-item">
+                        <div class="legacy-icon"><i class="fas fa-school"></i></div>
+                        <h3>ОБРАЗОВАНИЕ</h3>
+                        <ul>
+                            <li>39 школ по всему Казахстану.</li>
+                            <li>Костанайский региональный университет.</li>
+                            <li>Институт языкознания в Алматы.</li>
+                        </ul>
+                    </div>
+                    <div class="legacy-item">
+                        <div class="legacy-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3>ИНФРАСТРУКТУРА</h3>
+                        <ul>
+                            <li>Около 200 улиц в разных городах страны.</li>
+                            <li>1 международный аэропорт в Костанае.</li>
+                            <li>1 населенный пункт.</li>
+                        </ul>
+                    </div>
+                    <div class="legacy-item">
+                        <div class="legacy-icon"><i class="fas fa-landmark"></i></div>
+                        <h3>ПАМЯТЬ</h3>
+                        <ul>
+                            <li>Мемориальный дом-музей в Алматы (в доме, где он жил в 1930-е годы).</li>
+                            <li>Орден имени Ахмета Байтурсынова для деятелей науки и образования.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ТАБ: КОНТАКТЫ -->
+    <div id="tab-contacts" class="tab-content">
+        <section class="contacts-section">
+            <div class="container">
+                <div class="contacts-grid">
+                    <div class="contact-info">
+                        <h2>КОНТАКТНАЯ ИНФОРМАЦИЯ</h2>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-details">
+                                <h3>АДРЕС</h3>
+                                <p>150000, Северо-Казахстанская область, г. Петропавловск, ул. Победы, 5</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div class="contact-details">
+                                <h3>ТЕЛЕФОНЫ</h3>
+                                <p>+7 (7152) 37-11-24 - Директор</p>
+                                <p>+7 (7152) 47-51-89 - Приёмная</p>
+                                <p>+7 (7152) 47-06-70 - Мини-центр</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-details">
+                                <h3>E-MAIL</h3>
+                                <p>school9@uralsk.edu.kz - Общие вопросы</p>
+                                <p>director@school9.edu.kz - Директору</p>
+                                <p>zaveduch@school9.edu.kz - Учебной части</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                            <div class="contact-details">
+                                <h3>РЕЖИМ РАБОТЫ</h3>
+                                <p>Понедельник - Пятница: 8:00 - 18:00</p>
+                                <p>Суббота: 9:00 - 14:00</p>
+                                <p>Воскресенье: ВЫХОДНОЙ</p>
+                            </div>
+                        </div>
+                        <!-- СОЦСЕТИ -->
+                        <div class="contact-item">
+                            <div class="contact-icon" style="color: #E1306C;"><i class="fas fa-hashtag"></i></div>
+                            <div class="contact-details">
+                                <h3>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h3>
+                                <div style="display: flex; gap: 15px; margin-top: 5px; font-size: 1.8rem;">
+                                    <a href="#" target="_blank" style="color: #E1306C; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" target="_blank" style="color: #1877F2; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" target="_blank" style="color: #FF0000; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-youtube"></i></a>
+                                    <a href="#" target="_blank" style="color: #0088cc; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-telegram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe src="https://yandex.ru/map-widget/v1/?text=Петропавловск%20улица%20Победы%205&z=16" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="border-radius: 8px; min-height: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hours-section">
+            <div class="container">
+                <h2 class="section-title">ЧАСЫ ПРИЁМА</h2>
+                <div class="hours-grid">
+                    <div class="hours-card">
+                        <div class="hours-header">
+                            <div class="hours-icon"><i class="fas fa-user-tie"></i></div>
+                            <div>
+                                <h3>ДИРЕКТОР</h3>
+                                <p>Аленова Гульден Жаксылыковна</p>
+                            </div>
+                        </div>
+                        <div class="hours-schedule">
+                            <div class="hours-day"><span class="day-name">Понедельник</span><span class="day-time">14:00-17:00</span></div>
+                            <div class="hours-day"><span class="day-name">Среда</span><span class="day-time">14:00-17:00</span></div>
+                        </div>
+                    </div>
+
+                    <div class="hours-card">
+                        <div class="hours-header">
+                            <div class="hours-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                            <div>
+                                <h3>УЧЕБНАЯ ЧАСТЬ</h3>
+                                <p>Айгүл Шакирова</p>
+                            </div>
+                        </div>
+                        <div class="hours-schedule">
+                            <div class="hours-day"><span class="day-name">Понедельник</span><span class="day-time">9:00-13:00</span></div>
+                            <div class="hours-day"><span class="day-name">Четверг</span><span class="day-time">10:00-13:00</span></div>
+                        </div>
+                    </div>
+
+                    <div class="hours-card">
+                        <div class="hours-header">
+                            <div class="hours-icon"><i class="fas fa-hands-helping"></i></div>
+                            <div>
+                                <h3>ВОСПИТАТЕЛИ</h3>
+                                <p>Қанат Жұмабаев</p>
+                            </div>
+                        </div>
+                        <div class="hours-schedule">
+                            <div class="hours-day"><span class="day-name">Среда</span><span class="day-time">15:00-18:00</span></div>
+                            <div class="hours-day"><span class="day-name">Четверг</span><span class="day-time">15:00-18:00</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="departments-section">
+            <div class="container">
+                <h2 class="section-title">ОТДЕЛЫ ШКОЛЫ</h2>
+                <div class="departments-grid">
+                    <div class="dept-card"><div class="dept-icon"><i class="fas fa-book"></i></div><h3>БИБЛИОТЕКА</h3><p class="dept-contact">+7 (7112) 51-22-38</p><p>library@school9.edu.kz</p><p>2 этаж, каб.205</p></div>
+                    <div class="dept-card"><div class="dept-icon"><i class="fas fa-heartbeat"></i></div><h3>МЕДПУНКТ</h3><p class="dept-contact">+7 (7152) 51-22-39</p><p>medpunkt@school9.edu.kz</p><p>1 этаж, каб.101</p></div>
+                    <div class="dept-card"><div class="dept-icon"><i class="fas fa-utensils"></i></div><h3>СТОЛОВАЯ</h3><p class="dept-contact">+7 (7152) 51-22-40</p><p>1 этаж, питание 8:30-16:00</p></div>
+                    <div class="dept-card"><div class="dept-icon"><i class="fas fa-laptop"></i></div><h3>IT-ОТДЕЛ</h3><p class="dept-contact">+7 (7152) 51-22-41</p><p>it@school9.edu.kz</p><p>3 этаж, каб.301</p></div>
+                    <div class="dept-card"><div class="dept-icon"><i class="fas fa-user-graduate"></i></div><h3>ПСИХОЛОГ</h3><p class="dept-contact">+7 (7152) 51-22-42</p><p>psycholog@school9.edu.kz</p><p>2 этаж, каб.208</p></div>
+                    <div class="dept-card"><div class="dept-icon"><i class="fas fa-dumbbell"></i></div><h3>СПОРТИВНЫЙ ОТДЕЛ</h3><p class="dept-contact">+7 (7152) 51-22-43</p><p>Марат Қожанов</p><p>Спортзал, 1 этаж</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="emergency-section">
+            <div class="container">
+                <h2 class="section-title">ЭКСТРЕННЫЕ СЛУЧАИ</h2>
+                <div class="emergency-grid">
+                    <div class="emergency-card"><div class="emergency-icon"><i class="fas fa-ambulance"></i></div><h3>СКОРАЯ ПОМОЩЬ</h3><div class="emergency-phone">103</div><p class="emergency-desc">При проблемах со здоровьем</p></div>
+                    <div class="emergency-card"><div class="emergency-icon"><i class="fas fa-shield-alt"></i></div><h3>ПОЛИЦИЯ</h3><div class="emergency-phone">102</div><p class="emergency-desc">В опасных ситуациях</p></div>
+                    <div class="emergency-card"><div class="emergency-icon"><i class="fas fa-fire-extinguisher"></i></div><h3>ПОЖАРНЫЕ</h3><div class="emergency-phone">101</div><p class="emergency-desc">При пожаре или аварии</p></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-school">№9 МЕКТЕП (DEBUG: ru)</div>
+                    <div class="logo-name">КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы»</div>
+                    <div class="social-links">
+
+                        <a href="https://t.me/school9_uralsk" aria-label="telegram">TELEGRAM</a>
+
+                        <a href="https://instagram.com/school9_uralsk" aria-label="instagram">INSTAGRAM</a>
+
+                        <a href="https://facebook.com/school9" aria-label="facebook">FACEBOOK</a>
+
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-nav-title="Быстрые ссылки">БЫСТРЫЕ ССЫЛКИ</h4>
+                    <ul>
+                        <li><a href="../" data-nav-title="Главная">Главная</a></li>
+                        <li><a href="../about/" data-nav-title="О школе">О школе</a></li>
+                        <li><a href="../news/" data-nav-title="Новости">Новости</a></li>
+                        <li><a href="../contacts/" data-nav-title="Контакты">Контакты</a></li>
+                        <li><a href="https://egov.kz/cms/ru/articles/state_symbols" target="_blank" data-nav-title="Гос. символы">
+                            Государственные символы
+                        </a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-nav-title="Документы">ДОКУМЕНТЫ</h4>
+                    <ul>
+                        <li><a href="../documents/ustav/" data-nav-title="Устав школы">Устав школы</a></li>
+                        <li><a href="../documents/license/" data-nav-title="Лицензия">Лицензия</a></li>
+                        <li><a href="../documents/admission/" data-nav-title="Правила приема">Правила приема</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-nav-title="Контакты">КОНТАКТЫ</h4>
+                        <address>
+                            <p>📍 г. Петропавловск, ул. Победы, 5</p>
+                            <p>📞 +7 (7152) 37-11-24</p>
+                            <p>📞 Телефон доверия: +7 (7152) 47-51-89</p>
+                            <p>✉️ school9@sqo.edu.kz</p>
+                            <p>🕒 Пн-Пт 8:00–19:00</p>
+                        </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы». Все права защищены.</div>
+                <div class="developer">Разработано: IT-класс №9 Мектеп</div>
+            </div>
+        </div>
+    </footer>
+<script>
+    // Передаем переменную из MkDocs в глобальный JavaScript
+    var base_url = "..";
+</script>
+    
+        <script src="../assets/js/teachers_data.js"></script>
+    
+        <script src="../assets/js/main.js"></script>
+    
+        <script src="../assets/js/accessibility.js"></script>
+    
+        <script src="../assets/js/news_page.js"></script>
+    
+        <script src="../assets/js/mo_dynamic.js"></script>
+    
+        <script src="../assets/js/teachers_render.js"></script>
+    
+
+    
+
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-add AOS to standard components
+            const animatedElements = document.querySelectorAll('.hub-card, .info-card, .club-card, .news-card, .dept-card, .emergency-card, .gallery-item, .hours-card, .contact-item, .contact-info, .map-container');
+            animatedElements.forEach((el, index) => {
+                if (!el.hasAttribute('data-aos')) {
+                    el.setAttribute('data-aos', 'fade-up');
+                    el.setAttribute('data-aos-delay', (index % 4) * 100);
+                }
+            });
+
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 50
+            });
+        });
+    </script>
+</body>
+</html>

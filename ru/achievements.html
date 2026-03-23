@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Достижения учеников и учителей КГУ Средняя школа №9 имени А. Байтурсынулы.">
+    <title>Наши достижения - КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы»</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+
+   
+        <link rel="stylesheet" href="../assets/stylesheets/style.css">
+    
+        <link rel="stylesheet" href="../assets/stylesheets/news_page.css">
+    
+
+    
+    
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="">
+<header>
+    <div class="container header-main-wrapper">
+        <div class="header-logo-section">
+    <a href="../..">
+        <img id="main-logo" 
+             src="../assets/images/logo/logo_kaz.png" 
+             data-logo-ru="../assets/images/logo/logo_rus.png" 
+             data-logo-kk="../assets/images/logo/logo_kaz.png" 
+             alt="Логотип школы">
+    </a>
+</div>
+	<div class="header-content-section">
+		<div class="header-top-row">
+        <div class="school-title">
+                    <div class="school-name-main">
+                         КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы»
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <button id="toggle-dark-mode" class="accessibility-btn" title="Темная тема (Dark Mode)">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="toggle-bvi" class="accessibility-btn" title="Версия для слабовидящих">
+                        <i class="fas fa-eye"></i> <span>Доступность</span>
+                    </button>
+                    
+                    <div class="lang-switcher">
+                        
+                        
+                        
+                        
+                            
+                        
+
+                        
+                            
+                            
+                                
+                            
+
+                            <a href="../ru/achievements.html" 
+                               class="lang-btn active" 
+                               data-lang="ru">
+                               RU
+                            </a>
+                        
+                            
+                            
+
+                            <a href="../achievements.html" 
+                               class="lang-btn " 
+                               data-lang="kk">
+                               KK
+                            </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    
+                        
+                            <li class="menu">
+                                <a href="index.html" 
+                                    
+                                   data-nav-title="Главная">Главная</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="about.html" 
+                                    
+                                   data-nav-title="О школе">О школе</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="educational.html" 
+                                    
+                                   data-nav-title="Учебный процесс">Учебный процесс</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="school-life.html" 
+                                    
+                                   data-nav-title="Жизнь школы">Жизнь школы</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="official.html" 
+                                    
+                                   data-nav-title="Официальный раздел">Официальный раздел</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="news.html" 
+                                    
+                                   data-nav-title="Новости">Новости</a>
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+        </div>
+</div>
+</header>
+
+    <main>
+        <section class="page-hero">
+    <div class="container page-hero-content">
+        <h1>НАШИ ДОСТИЖЕНИЯ</h1>
+        <p>Гордость нашей школы: победы и награды</p>
+    </div>
+</section>
+
+<style>
+.masonry-gallery {
+    column-count: 3;
+    column-gap: 20px;
+    padding: 40px 0;
+}
+@media (max-width: 900px) { .masonry-gallery { column-count: 2; } }
+@media (max-width: 600px) { .masonry-gallery { column-count: 1; } }
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+.gallery-item img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 55, 115, 0.9), transparent);
+    color: white;
+    padding: 30px 20px 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
+}
+.gallery-caption h3 { margin: 0 0 5px 0; font-size: 1.1rem; color: #fff; }
+.gallery-caption p { margin: 0; font-size: 0.85rem; opacity: 0.9; }
+
+/* Lightbox styles */
+.lightbox {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9); z-index: 9999;
+    display: none; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.3s;
+}
+.lightbox.active { display: flex; opacity: 1; }
+.lightbox img { max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 0 50px rgba(0,0,0,0.5); }
+.lightbox-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
+</style>
+
+<div class="container">
+    <div class="masonry-gallery">
+        <div class="gallery-item">
+            <img src="https://placehold.co/600x800/003773/FFF?text=Гран-при+коммерс" alt="Кубок">
+            <div class="gallery-caption"><h3>Гран-при робототехники</h3><p>Республиканский турнир 2025</p></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://placehold.co/600x400/FF8200/FFF?text=Алтын+Белгі" alt="Медаль">
+            <div class="gallery-caption"><h3>Наши отличники</h3><p>Выпуск 2024 года</p></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://placehold.co/600x600/00BEF0/FFF?text=Спорт+Чемпионы" alt="Спорт">
+            <div class="gallery-caption"><h3>Золото по баскетболу</h3><p>Городская школьная лига</p></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://placehold.co/600x500/4caf50/FFF?text=Эко-школа" alt="Экология">
+            <div class="gallery-caption"><h3>Эко-отряд</h3><p>Победители республиканского конкурса</p></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://placehold.co/600x700/e91e63/FFF?text=Олимпиада" alt="Олимпиада">
+            <div class="gallery-caption"><h3>Олимпиада по физике</h3><p>1 место в областном этапе</p></div>
+        </div>
+    </div>
+</div>
+
+<div class="lightbox" id="gallery-lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="">
+</div>
+
+<script>
+document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.addEventListener('click', function() {
+        document.getElementById('lightbox-img').src = this.src;
+        document.getElementById('gallery-lightbox').classList.add('active');
+        // Prevent scrolling while lightbox is active
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+function closeLightbox() {
+    document.getElementById('gallery-lightbox').classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Close on background click
+document.getElementById('gallery-lightbox').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeLightbox();
+    }
+});
+</script>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-school">№9 МЕКТЕП (DEBUG: ru)</div>
+                    <div class="logo-name">КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы»</div>
+                    <div class="social-links">
+
+                        <a href="https://t.me/school9_uralsk" aria-label="telegram">TELEGRAM</a>
+
+                        <a href="https://instagram.com/school9_uralsk" aria-label="instagram">INSTAGRAM</a>
+
+                        <a href="https://facebook.com/school9" aria-label="facebook">FACEBOOK</a>
+
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-nav-title="Быстрые ссылки">БЫСТРЫЕ ССЫЛКИ</h4>
+                    <ul>
+                        <li><a href="../" data-nav-title="Главная">Главная</a></li>
+                        <li><a href="../about/" data-nav-title="О школе">О школе</a></li>
+                        <li><a href="../news/" data-nav-title="Новости">Новости</a></li>
+                        <li><a href="../contacts/" data-nav-title="Контакты">Контакты</a></li>
+                        <li><a href="https://egov.kz/cms/ru/articles/state_symbols" target="_blank" data-nav-title="Гос. символы">
+                            Государственные символы
+                        </a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-nav-title="Документы">ДОКУМЕНТЫ</h4>
+                    <ul>
+                        <li><a href="../documents/ustav/" data-nav-title="Устав школы">Устав школы</a></li>
+                        <li><a href="../documents/license/" data-nav-title="Лицензия">Лицензия</a></li>
+                        <li><a href="../documents/admission/" data-nav-title="Правила приема">Правила приема</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-nav-title="Контакты">КОНТАКТЫ</h4>
+                        <address>
+                            <p>📍 г. Петропавловск, ул. Победы, 5</p>
+                            <p>📞 +7 (7152) 37-11-24</p>
+                            <p>📞 Телефон доверия: +7 (7152) 47-51-89</p>
+                            <p>✉️ school9@sqo.edu.kz</p>
+                            <p>🕒 Пн-Пт 8:00–19:00</p>
+                        </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы». Все права защищены.</div>
+                <div class="developer">Разработано: IT-класс №9 Мектеп</div>
+            </div>
+        </div>
+    </footer>
+<script>
+    // Передаем переменную из MkDocs в глобальный JavaScript
+    var base_url = "..";
+</script>
+    
+        <script src="../assets/js/teachers_data.js"></script>
+    
+        <script src="../assets/js/main.js"></script>
+    
+        <script src="../assets/js/accessibility.js"></script>
+    
+        <script src="../assets/js/news_page.js"></script>
+    
+        <script src="../assets/js/mo_dynamic.js"></script>
+    
+        <script src="../assets/js/teachers_render.js"></script>
+    
+
+    
+
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-add AOS to standard components
+            const animatedElements = document.querySelectorAll('.hub-card, .info-card, .club-card, .news-card, .dept-card, .emergency-card, .gallery-item, .hours-card, .contact-item, .contact-info, .map-container');
+            animatedElements.forEach((el, index) => {
+                if (!el.hasAttribute('data-aos')) {
+                    el.setAttribute('data-aos', 'fade-up');
+                    el.setAttribute('data-aos-delay', (index % 4) * 100);
+                }
+            });
+
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 50
+            });
+        });
+    </script>
+</body>
+</html>
