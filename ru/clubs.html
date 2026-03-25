@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Официальный сайт КГУ Средняя школа №9 имени А. Байтурсынулы">
+    <title>Clubs - КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы»</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+
+   
+        <link rel="stylesheet" href="../assets/stylesheets/style.css">
+    
+        <link rel="stylesheet" href="../assets/stylesheets/news_page.css">
+    
+
+    
+    
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="">
+<header>
+    <div class="container header-main-wrapper">
+        <div class="header-logo-section">
+    <a href="../..">
+        <img id="main-logo" 
+             src="../assets/images/logo/logo_kaz.png" 
+             data-logo-ru="../assets/images/logo/logo_rus.png" 
+             data-logo-kk="../assets/images/logo/logo_kaz.png" 
+             alt="Логотип школы">
+    </a>
+</div>
+	<div class="header-content-section">
+		<div class="header-top-row">
+        <div class="school-title">
+                    <div class="school-name-main">
+                         КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы»
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <button id="toggle-dark-mode" class="accessibility-btn" title="Темная тема (Dark Mode)">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="toggle-bvi" class="accessibility-btn" title="Версия для слабовидящих">
+                        <i class="fas fa-eye"></i> <span>Доступность</span>
+                    </button>
+                    
+                    <div class="lang-switcher">
+                        <!-- DEBUG: page.url='ru/clubs.html' base_url='..' i18n_page_locale='ru' current_lang='' -->
+                        
+                        
+                            
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+                            
+                            
+                                
+                            
+
+                            <a href="../ru/clubs.html" 
+                               class="lang-btn active" 
+                               data-lang="ru">
+                               RU
+                            </a>
+                        
+                            
+                            
+
+                            <a href="../clubs.html" 
+                               class="lang-btn " 
+                               data-lang="kk">
+                               KK
+                            </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    
+                        
+                            <li class="menu">
+                                <a href="index.html" 
+                                    
+                                   data-nav-title="Главная">Главная</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="about.html" 
+                                    
+                                   data-nav-title="О школе">О школе</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="educational.html" 
+                                    
+                                   data-nav-title="Учебный процесс">Учебный процесс</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="school-life.html" 
+                                    
+                                   data-nav-title="Жизнь школы">Жизнь школы</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="official.html" 
+                                    
+                                   data-nav-title="Официальный раздел">Официальный раздел</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="news.html" 
+                                    
+                                   data-nav-title="Новости">Новости</a>
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+        </div>
+</div>
+</header>
+
+    <main>
+        <section class="page-hero">
+    <div class="container page-hero-content">
+        <h1>КРУЖКИ И СЕКЦИИ</h1>
+        <p>Возможность развития талантов для каждого ученика</p>
+    </div>
+</section>
+
+<section class="clubs-section">
+    <div class="container">
+        <h2 class="section-title">ВСЕ КРУЖКИ</h2>
+        <div class="clubs-filters">
+            <button class="filter-btn active" data-filter="all">ВСЕ</button>
+            <button class="filter-btn" data-filter="sport">СПОРТ</button>
+            <button class="filter-btn" data-filter="science">НАУКА</button>
+            <button class="filter-btn" data-filter="art">ИСКУССТВО</button>
+            <button class="filter-btn" data-filter="tech">ТЕХНОЛОГИИ</button>
+            <button class="filter-btn" data-filter="language">ЯЗЫКИ</button>
+        </div>
+
+        <div class="clubs-grid">
+            <div class="club-card" data-category="tech">
+                <div class="club-header">
+                    <div class="club-category">ТЕХНОЛОГИИ</div>
+                    <div class="club-icon" style="background: var(--gradient-blue);"><i class="fas fa-robot"></i></div>
+                    <h3>РОБОТОТЕХНИКА</h3>
+                    <div class="club-teacher"><i class="fas fa-user"></i> Асхат Нұрмағамбетов</div>
+                </div>
+                <div class="club-content">
+                    <div class="club-info"><div class="club-schedule"><i class="fas fa-calendar-alt"></i> Пн, Ср 15:00-17:00</div><div class="club-age">5-11 классы</div></div>
+                    <div class="club-description">Сборка и программирование роботов на основе LEGO Mindstorms, Arduino. Подготовка к международным соревнованиям.</div>
+                    <div class="club-footer">
+                        <div class="club-places"><i class="fas fa-users"></i> 12/15 мест</div>
+                        <button class="club-btn">ЗАПИСАТЬСЯ</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="club-card" data-category="sport">
+                <div class="club-header">
+                    <div class="club-category">СПОРТ</div>
+                    <div class="club-icon" style="background: var(--gradient-orange);"><i class="fas fa-basketball-ball"></i></div>
+                    <h3>БАСКЕТБОЛ</h3>
+                    <div class="club-teacher"><i class="fas fa-user"></i> Марат Қожанов</div>
+                </div>
+                <div class="club-content">
+                    <div class="club-info"><div class="club-schedule"><i class="fas fa-calendar-alt"></i> Ежедневно 16:00-18:00</div><div class="club-age">7-11 классы</div></div>
+                    <div class="club-description">Баскетбольная команда. Участие в городских и областных соревнованиях. Формирование здорового образа жизни.</div>
+                    <div class="club-footer">
+                        <div class="club-places"><i class="fas fa-users"></i> 20/25 мест</div>
+                        <button class="club-btn">ЗАПИСАТЬСЯ</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="club-card" data-category="art">
+                <div class="club-header">
+                    <div class="club-category">ИСКУССТВО</div>
+                    <div class="club-icon" style="background: var(--gradient-teal);"><i class="fas fa-palette"></i></div>
+                    <h3>ЖИВОПИСЬ</h3>
+                    <div class="club-teacher"><i class="fas fa-user"></i> Гүлмира Рахманова</div>
+                </div>
+                <div class="club-content">
+                    <div class="club-info"><div class="club-schedule"><i class="fas fa-calendar-alt"></i> Чт, Пт 14:00-16:00</div><div class="club-age">1-11 классы</div></div>
+                    <div class="club-description">Изучение техник акварели, гуаши, пастели. Композиция, теория цвета. Ежегодные выставки.</div>
+                    <div class="club-footer">
+                        <div class="club-places"><i class="fas fa-users"></i> 18/20 мест</div>
+                        <button class="club-btn">ЗАПИСАТЬСЯ</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="club-card" data-category="tech">
+                <div class="club-header">
+                    <div class="club-category">ТЕХНОЛОГИИ</div>
+                    <div class="club-icon" style="background: var(--deep-blue);"><i class="fas fa-code"></i></div>
+                    <h3>ПРОГРАММИРОВАНИЕ</h3>
+                    <div class="club-teacher"><i class="fas fa-user"></i> Данияр Сағитов</div>
+                </div>
+                <div class="club-content">
+                    <div class="club-info"><div class="club-schedule"><i class="fas fa-calendar-alt"></i> Ср, Чт 15:30-17:30</div><div class="club-age">8-11 классы</div></div>
+                    <div class="club-description">Основы Python, JavaScript. Веб-разработка, мобильные приложения. Участие в хакатонах.</div>
+                    <div class="club-footer">
+                        <div class="club-places"><i class="fas fa-users"></i> 10/15 мест</div>
+                        <button class="club-btn">ЗАПИСАТЬСЯ</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="club-card" data-category="sport">
+                <div class="club-header">
+                    <div class="club-category">СПОРТ</div>
+                    <div class="club-icon" style="background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);"><i class="fas fa-chess"></i></div>
+                    <h3>ШАХМАТЫ</h3>
+                    <div class="club-teacher"><i class="fas fa-user"></i> Серік Әбілов</div>
+                </div>
+                <div class="club-content">
+                    <div class="club-info"><div class="club-schedule"><i class="fas fa-calendar-alt"></i> Пн-Пт 14:00-16:00</div><div class="club-age">1-11 классы</div></div>
+                    <div class="club-description">Теория шахмат, стратегия, тактика. Участие в турнирах. Развитие логического мышления.</div>
+                    <div class="club-footer">
+                        <div class="club-places"><i class="fas fa-users"></i> 25/30 мест</div>
+                        <button class="club-btn">ЗАПИСАТЬСЯ</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="club-card" data-category="language">
+                <div class="club-header">
+                    <div class="club-category">ЯЗЫКИ</div>
+                    <div class="club-icon" style="background: linear-gradient(135deg, #9C27B0 0%, #E91E63 100%);"><i class="fas fa-comments"></i></div>
+                    <h3>ДЕБАТНЫЙ КЛУБ</h3>
+                    <div class="club-teacher"><i class="fas fa-user"></i> Айгерім Мусаева</div>
+                </div>
+                <div class="club-content">
+                    <div class="club-info"><div class="club-schedule"><i class="fas fa-calendar-alt"></i> Среда 16:00-18:00</div><div class="club-age">9-11 классы</div></div>
+                    <div class="club-description">Профессиональные дебаты (World Schools, Karl Popper). Развитие ораторских навыков. Городские и республиканские турниры.</div>
+                    <div class="club-footer">
+                        <div class="club-places"><i class="fas fa-users"></i> 8/12 мест</div>
+                        <button class="club-btn full">ЗАПОЛНЕНО</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="benefits-section">
+    <div class="container">
+        <h2 class="section-title">ПРЕИМУЩЕСТВА КРУЖКОВ</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-brain"></i></div>
+                <h3>РАЗВИТИЕ ИНТЕЛЛЕКТА</h3>
+                <p>Развитие критического мышления, вычислений и навыков принятия решений</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-users"></i></div>
+                <h3>СОЦИАЛИЗАЦИЯ</h3>
+                <p>Общение с единомышленниками, работа в команде, новые друзья</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-medal"></i></div>
+                <h3>ДОСТИЖЕНИЯ</h3>
+                <p>Участие в конкурсах, соревнованиях, олимпиадах</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="registration-section">
+    <div class="container">
+        <h2 class="section-title">КАК ЗАПИСАТЬСЯ</h2>
+        <div class="registration-steps">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Выберите кружок</h3>
+                <p>Ознакомьтесь с описанием и расписанием</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Свяжитесь с руководителем</h3>
+                <p>По телефону или через личный кабинет</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Заполните заявление</h3>
+                <p>У родителей и в канцелярии</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <h3>Приходите на занятия</h3>
+                <p>Следуйте расписанию</p>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-school">№9 МЕКТЕП (DEBUG: ru)</div>
+                    <div class="logo-name">КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы»</div>
+                    <div class="social-links">
+
+                        <a href="https://t.me/school9_uralsk" aria-label="telegram">TELEGRAM</a>
+
+                        <a href="https://instagram.com/school9_uralsk" aria-label="instagram">INSTAGRAM</a>
+
+                        <a href="https://facebook.com/school9" aria-label="facebook">FACEBOOK</a>
+
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-nav-title="Быстрые ссылки">БЫСТРЫЕ ССЫЛКИ</h4>
+                    <ul>
+                        <li><a href="../ru/index.html" data-nav-title="Главная">Главная</a></li>
+                        <li><a href="../ru/about.html" data-nav-title="О школе">О школе</a></li>
+                        <li><a href="../ru/news.html" data-nav-title="Новости">Новости</a></li>
+                        <li><a href="../ru/about.html#tab-contacts" data-nav-title="Контакты">Контакты</a></li>
+                        <li><a href="https://egov.kz/cms/ru/articles/state_symbols" target="_blank" data-nav-title="Гос. символы">
+                            Государственные символы
+                        </a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-nav-title="Документы">ДОКУМЕНТЫ</h4>
+                    <ul>
+                        <li><a href="../ru/documents/ustav.html" data-nav-title="Устав школы">Устав школы</a></li>
+                        <li><a href="../ru/documents/license.html" data-nav-title="Лицензия">Лицензия</a></li>
+                        <li><a href="../ru/documents/admission.html" data-nav-title="Правила приема">Правила приема</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-nav-title="Контакты">КОНТАКТЫ</h4>
+                        <address>
+                            <p>📍 г. Петропавловск, ул. Победы, 5</p>
+                            <p>📞 +7 (7152) 37-11-24</p>
+                            <p>📞 Телефон доверия: +7 (7152) 47-51-89</p>
+                            <p>✉️ school9@sqo.edu.kz</p>
+                            <p>🕒 Пн-Пт 8:00–19:00</p>
+                        </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы». Все права защищены.</div>
+                <div class="developer">Разработано: IT-класс №9 Мектеп</div>
+            </div>
+        </div>
+    </footer>
+<script>
+    // Передаем переменную из MkDocs в глобальный JavaScript
+    var base_url = "..";
+
+    // Исправляем пути к картинкам для GitHub Pages (подпапка school_web_site)
+    // MkDocs генерирует относительные пути, которые ломаются в подпапках /ru/, /ru/mo/ и т.д.
+    document.addEventListener('DOMContentLoaded', function() {
+        var SITE_ROOT = 'https://alex-gogl-work.github.io/school_web_site/';
+        document.querySelectorAll('img[src]').forEach(function(img) {
+            // Если картинка не загрузилась или src содержит assets/ но не абсолютный путь
+            var src = img.getAttribute('src');
+            if (src && !src.startsWith('http') && !src.startsWith('//') && src.indexOf('assets/') !== -1) {
+                // Нормализуем путь: убираем ../ и оставляем только часть начиная с assets/
+                var assetsIndex = src.indexOf('assets/');
+                if (assetsIndex !== -1) {
+                    img.setAttribute('src', SITE_ROOT + src.substring(assetsIndex));
+                }
+            }
+        });
+    });
+</script>
+    
+        <script src="../assets/js/teachers_data.js"></script>
+    
+        <script src="../assets/js/main.js"></script>
+    
+        <script src="../assets/js/accessibility.js"></script>
+    
+        <script src="../assets/js/news_page.js"></script>
+    
+        <script src="../assets/js/mo_dynamic.js"></script>
+    
+        <script src="../assets/js/teachers_render.js"></script>
+    
+
+    
+
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-add AOS to standard components
+            const animatedElements = document.querySelectorAll('.hub-card, .info-card, .club-card, .news-card, .dept-card, .emergency-card, .gallery-item, .hours-card, .contact-item, .contact-info, .map-container');
+            animatedElements.forEach((el, index) => {
+                if (!el.hasAttribute('data-aos')) {
+                    el.setAttribute('data-aos', 'fade-up');
+                    el.setAttribute('data-aos-delay', (index % 4) * 100);
+                }
+            });
+
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 50
+            });
+        });
+    </script>
+</body>
+</html>

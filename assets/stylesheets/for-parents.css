@@ -1,0 +1,182 @@
+/* =========================================
+   СТРАНИЦА "ДЛЯ РОДИТЕЛЕЙ"
+   ========================================= */
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* .document-card уже в pages.css, здесь можно добавить специфику */
+.document-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: var(--transition);
+    border: 1px solid var(--gray);
+}
+
+.document-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--electric-cyan);
+}
+
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.committee-member {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.committee-member:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.member-photo {
+    height: 200px;
+    background: var(--gradient-teal);
+}
+
+.member-info {
+    padding: 25px;
+}
+
+.member-name {
+    color: var(--deep-blue);
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: var(--electric-cyan);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.member-contact {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
+
+/* FAQ */
+.faq-section {
+    background: var(--light-gray);
+    padding: 100px 0;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.faq-item {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--deep-blue);
+    font-weight: 700;
+}
+
+.faq-question i {
+    color: var(--electric-cyan);
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    margin-top: 15px;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Специалисты */
+.specialists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.specialist-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: var(--transition);
+}
+
+.specialist-card:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--electric-cyan);
+}
+
+.specialist-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--white);
+}
+
+.specialist-info h4 {
+    color: var(--deep-blue);
+    margin-bottom: 5px;
+}
+
+.specialist-info p {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.specialist-contact {
+    color: var(--electric-cyan);
+    font-weight: 600;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,90 @@
+// =========================================
+// ПЕРЕКЛЮЧЕНИЕ ЯЗЫКОВ
+// =========================================
+function initLanguageSwitcher() {
+    const langButtons = document.querySelectorAll('.lang-btn');
+    
+    // 1. Пытаемся понять, на какой странице мы сейчас находимся.
+    // Если в URL есть /ru/, значит мы на русской версии.
+    // Иначе считаем, что мы на базовой (казахской) версии.
+    let currentLang = 'kk'; // По умолчанию
+    if (window.location.pathname.includes('/ru/')) {
+        currentLang = 'ru';
+    } else if (localStorage.getItem('siteLang') === 'ru' && !window.location.pathname.includes('/kk/')) {
+        // Подстраховка через память
+        currentLang = 'ru'; 
+    }
+
+    // 2. Устанавливаем язык интерфейса (переводим шапку и меню)
+    setLanguage(currentLang);
+    localStorage.setItem('siteLang', currentLang);
+
+    // 3. ПРАВИЛЬНАЯ ПОДСВЕТКА КНОПКИ ПРИ ЗАГРУЗКЕ
+    langButtons.forEach(b => b.classList.remove('active')); // Убираем синий цвет у всех
+    const currentBtn = document.querySelector(`.lang-btn[data-lang="${currentLang}"]`);
+    if (currentBtn) {
+        currentBtn.classList.add('active'); // Красим нужную
+    }
+
+    // 4. Обработчик клика
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            // При клике мы просто запоминаем выбор. 
+            // Браузер сам перейдет по ссылке href, и страница перезагрузится.
+            const lang = this.getAttribute('data-lang');
+            localStorage.setItem('siteLang', lang);
+        });
+    });
+}
+
+function setLanguage(lang) {
+    document.documentElement.lang = lang;
+    
+    // 1. Смена простого текста (логотип, шапка)
+    document.querySelectorAll('[data-lang-kk], [data-lang-ru]').forEach(element => {
+        const text = element.getAttribute(`data-lang-${lang}`);
+        if (text) element.textContent = text;
+    });
+
+    // 2. Смена логотипов (картинки)
+    document.querySelectorAll('[data-logo-kk], [data-logo-ru]').forEach(img => {
+        const newSrc = img.getAttribute(`data-logo-${lang}`);
+        if (newSrc) img.src = newSrc;
+    });
+
+    // 3. СЛОВАРЬ ПЕРЕВОДА НАВИГАЦИИ (МЕНЮ)
+    const navTranslations = {
+        "Главная": { kk: "Басты бет", ru: "Главная" },
+        "О школе": { kk: "Мектеп туралы", ru: "О школе" },
+        "Основная информация": { kk: "Негізгі ақпарат", ru: "Основная информация" },
+        "История школы": { kk: "Мектеп тарихы", ru: "История школы" },
+        "А. Байтурсынов": { kk: "А. Байтұрсынұлы", ru: "А. Байтурсынов" },
+        "Педагогический состав": { kk: "Педагогикалық құрам", ru: "Педагогический состав" },
+        "Нормативные документы": { kk: "Нормативтік құжаттар", ru: "Нормативные документы" },
+        "Контакты": { kk: "Байланыс", ru: "Контакты" },
+        "Новости": { kk: "Жаңалықтар", ru: "Новости" },
+        "Учебный процесс": { kk: "Оқу процесі", ru: "Учебный процесс" },
+        "Расписание": { kk: "Сабақ кестесі", ru: "Расписание" },
+        "Кружки и секции": { kk: "Үйірмелер мен секциялар", ru: "Кружки и секции" },
+        "Для учащихся": { kk: "Оқушыларға", ru: "Для учащихся" },
+        "Для родителей": { kk: "Ата-аналарға", ru: "Для родителей" },
+        "Информация для родителей": { kk: "Ата-аналарға арналған ақпарат", ru: "Информация для родителей" },
+        "Организация питания": { kk: "Тамақтандыруды ұйымдастыру", ru: "Организация питания" },
+        "Противодействие коррупции": { kk: "Жемқорлыққа қарсы шаралар", ru: "Меры антикоррупционной деятельности" }
+    };
+
+    // 4. Применяем перевод к меню
+    document.querySelectorAll('[data-nav-title]').forEach(el => {
+        const key = el.getAttribute('data-nav-title'); // Берем русское название как ключ
+        
+        if (navTranslations[key] && navTranslations[key][lang]) {
+            // Если это кнопка с выпадающим списком, возвращаем стрелочку " ▾"
+            if (el.classList.contains('dropdown-toggle')) {
+                el.textContent = navTranslations[key][lang] + ' ▾';
+            } else {
+                // Если обычная ссылка
+                el.textContent = navTranslations[key][lang];
+            }
+        }
+    });
+}

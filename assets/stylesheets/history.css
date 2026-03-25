@@ -1,0 +1,217 @@
+/* =========================================
+   СТРАНИЦА "ИСТОРИЯ ШКОЛЫ"
+   ========================================= */
+.timeline {
+    position: relative;
+    max-width: 1400px;
+    margin: 50px auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background: var(--gradient-blue);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 3px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-content {
+    padding: 30px;
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    position: relative;
+}
+
+.timeline-content h3 {
+    color: var(--deep-blue);
+    margin-bottom: 10px;
+}
+
+.timeline-content .year {
+    display: inline-block;
+    padding: 5px 15px;
+    background: var(--gradient-blue);
+    color: var(--white);
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background: var(--white);
+    top: 30px;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 0 4px var(--electric-cyan);
+}
+
+.timeline-item:nth-child(even) .timeline-content::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -10px;
+    background: var(--white);
+    top: 30px;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 0 4px var(--electric-cyan);
+}
+
+.timeline-item:nth-child(odd)::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background: var(--electric-cyan);
+    border: 4px solid var(--white);
+    top: 27px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even)::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: -17px;
+    background: var(--electric-cyan);
+    border: 4px solid var(--white);
+    top: 27px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Директора */
+.directors-section {
+    background: var(--light-gray);
+    padding: 100px 0;
+}
+
+.directors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.director-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.director-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.director-image {
+    height: 250px;
+    background: var(--gradient-blue);
+    position: relative;
+    overflow: hidden;
+}
+
+.director-info {
+    padding: 25px;
+}
+
+.director-period {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: var(--electric-cyan);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.director-name {
+    font-size: 1.3rem;
+    color: var(--deep-blue);
+    margin-bottom: 10px;
+}
+
+.director-info p {
+    color: var(--dark-gray);
+}
+
+/* Достижения */
+.achievements-section {
+    padding: 100px 0;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.achievement-card {
+    text-align: center;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.achievement-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: var(--gradient-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--white);
+}
+
+.achievement-card h3 {
+    color: var(--deep-blue);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.achievement-card p {
+    color: var(--dark-gray);
+}

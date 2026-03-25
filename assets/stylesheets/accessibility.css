@@ -1,0 +1,43 @@
+/* Специальные стили, которые активируются при наличии класса .bvi-mode у body */
+body.bvi-mode {
+    font-size: 1.5rem !important; /* Увеличиваем базовый шрифт */
+    line-height: 1.8 !important;
+    background-color: white !important;
+    color: black !important;
+}
+
+body.bvi-mode * {
+    background-color: white !important;
+    color: black !important;
+    border-color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+/* Выделение ссылок и кнопок в режиме доступности */
+body.bvi-mode a {
+    text-decoration: underline !important;
+    font-weight: bold !important;
+}
+
+body.bvi-mode img {
+    filter: grayscale(100%); /* Делаем фото черно-белыми для контраста */
+}
+
+/* Панель управления, которая появляется только в этом режиме */
+.bvi-panel {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    z-index: 10000;
+    padding: 10px;
+    text-align: center;
+}
+
+body.bvi-mode .bvi-panel {
+    display: block;
+}

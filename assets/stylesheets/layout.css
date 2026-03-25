@@ -1,0 +1,436 @@
+/* =========================================
+   ШАПКА (HEADER)
+   ========================================= */
+header {
+    position: fixed; /* Фиксирует шапку при прокрутке страницы */
+    top: 0; /* Прижимает к самому верху */
+    left: 0; /* Прижимает к левому краю */
+    width: 100%; /* Шапка на всю ширину экрана */
+    background-color: rgba(255, 255, 255, 0.98); /* Белый фон (почти непрозрачный) */
+    backdrop-filter: blur(10px); /* Эффект матового стекла (размывает фон под шапкой) */
+    z-index: 1000; /* Шапка всегда поверх других элементов */
+    box-shadow: var(--shadow-sm); /* Легкая тень снизу */
+    border-bottom: 2px solid var(--light-gray); /* Тонкая серая линия снизу */
+}
+
+/* Главный контейнер-обертка внутри шапки */
+.header-main-wrapper {
+    display: flex; /* Выстраиваем логотип и меню в один ряд */
+    align-items: stretch; /* Растягиваем правую часть по высоте логотипа */
+    padding: 10px 0; /* Отступы сверху и снизу */
+    gap: 10px; /* Расстояние между логотипом и правой частью */
+}
+
+/* --- ЛЕВАЯ СЕКЦИЯ: ЛОГОТИП --- */
+.header-logo-section {
+    flex-shrink: 0; /* Запрещаем блоку с логотипом сжиматься на узких экранах */
+    display: flex; /* Включаем Flexbox */
+}
+
+.header-logo-section img,
+#main-logo {
+    height: 148px; /* Жестко задаем высоту логотипа */
+    width: auto; /* Ширина подстраивается автоматически, сохраняя пропорции */
+    display: block; /* Убираем лишние отступы под картинкой */
+    transition: transform 0.3s ease; /* Плавность для анимации наведения */
+}
+
+.header-logo-section img:hover {
+    transform: scale(1.02); /* Логотип слегка увеличивается при наведении мышки */
+}
+
+/* --- ПРАВАЯ СЕКЦИЯ: НАЗВАНИЕ, КНОПКИ И МЕНЮ --- */
+.header-content-section {
+    flex-grow: 1; /* Разрешаем секции занять все оставшееся место справа */
+    display: flex; /* Включаем Flexbox */
+    flex-direction: column; /* Выстраиваем элементы колонкой (один под другим) */
+    justify-content: space-between; /* Расталкиваем верхнюю строку и меню по краям */
+    padding: 5px 0; /* Отступы сверху и снизу */
+}
+
+/* ВЕРХНЯЯ СТРОКА: Название школы + Языки */
+.header-top-row {
+    display: flex; /* Выстраиваем элементы в ряд */
+    justify-content: space-between; /* Название слева, кнопки справа */
+    align-items: center; /* Центрируем по вертикали */
+    padding-bottom: 12px; /* Отступ до разделительной линии */
+    border-bottom: 1px solid rgba(0,0,0,0.05); /* Еле заметная линия под названием */
+}
+
+/* Название школы */
+.school-name-main {
+    font-family: 'Montserrat', sans-serif; /* Шрифт текста */
+    font-weight: 900; /* Максимальная жирность */
+    font-size: 1.3rem; /* Размер шрифта */
+    color: var(--deep-blue); /* Темно-синий цвет */
+    line-height: 1.2; /* Межстрочный интервал */
+    max-width: 700px; /* Ограничиваем ширину, чтобы слишком длинный текст переносился */
+}
+
+/* Обертка для кнопок (языки и доступность) */
+.header-actions {
+    display: flex; /* Выстраиваем кнопки в ряд */
+    align-items: center; /* Центрируем по вертикали */
+    gap: 15px; /* Расстояние между кнопками */
+}
+
+/* Кнопка "Версия для слабовидящих" */
+.accessibility-btn {
+    background: var(--light-gray); /* Светло-серый фон */
+    border: 1px solid var(--gray); /* Тонкая серая рамка */
+    border-radius: 30px; /* Овальная форма */
+    padding: 8px 16px; /* Внутренние отступы */
+    cursor: pointer; /* Курсор-ручка */
+    transition: all 0.3s ease; /* Плавная анимация */
+    display: flex; /* Выстраиваем иконку и текст в ряд */
+    align-items: center; /* Центрируем по вертикали */
+    gap: 8px; /* Расстояние от иконки до текста */
+    color: var(--deep-blue); /* Синий текст */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* Полужирный */
+    font-size: 13px;
+}
+
+.accessibility-btn:hover {
+    background: var(--deep-blue); /* При наведении фон синий */
+    color: var(--white); /* Текст белый */
+}
+
+.accessibility-btn i {
+    font-size: 16px; /* Размер иконки глаза */
+}
+
+/* Переключатель языков (RU/KK) */
+.lang-switcher {
+    display: flex; /* Кнопки в ряд */
+    background: var(--light-gray); /* Фон подложки */
+    border-radius: 30px; /* Скругление подложки */
+    padding: 3px; /* Внутренний отступ */
+    border: 1px solid var(--gray); /* Рамка подложки */
+}
+
+/* Кнопка отдельного языка */
+.lang-btn {
+    padding: 6px 15px; /* Размер кнопки */
+    border-radius: 25px; /* Скругление */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--deep-blue);
+    transition: all 0.3s ease; /* Плавность переключения */
+}
+
+/* Активный выбранный язык */
+.lang-btn.active {
+    background: var(--gradient-blue); /* Синий градиент для активной кнопки */
+    color: var(--white); /* Белый текст */
+    box-shadow: var(--shadow-sm); /* Легкая тень */
+}
+
+/* =========================================
+   ГЛАВНОЕ МЕНЮ НАВИГАЦИИ
+   ========================================= */
+.header-bottom-row {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul {
+    display: flex; /* Выстраиваем пункты меню в ряд */
+    align-items: stretch; /* Растягиваем кнопки по высоте */
+    list-style: none; /* Убираем точки (маркеры списка) */
+    gap: 10px; /* Отступы между кнопками меню */
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav > ul > li {
+    display: flex;
+}
+
+/* Кнопки меню первого уровня */
+.main-nav > ul > li > a,
+.dropdown-toggle {
+    display: flex;
+    align-items: center; /* Текст по центру вертикально */
+    justify-content: center; /* Текст по центру горизонтально */
+    text-align: center;
+    width: 195px; /* Фиксированная ширина кнопок */
+	height: 50px; /* Фиксированная высота кнопок */
+    line-height: 1.2;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase; /* Все буквы ЗАГЛАВНЫЕ */
+    letter-spacing: 1px; /* Чуть увеличиваем расстояние между буквами */
+    
+    padding: 10px 20px;
+    border-radius: 30px; /* Овальные кнопки */
+    color: var(--deep-blue);
+    cursor: pointer;
+    transition: all 0.3s ease; /* Плавность смены цвета */
+
+    background-color: var(--white); /* Белый фон для неактивных кнопок */
+    border: 1px solid rgba(0, 55, 115, 0.1); /* Полупрозрачная синяя рамка */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); /* Легкая объемная тень */
+}
+
+/* Убираем псевдоэлементы (подчеркивания) от базовой темы MkDocs */
+.main-nav > ul > li > a:after,
+.dropdown-toggle:after {
+    display: none;
+}
+
+/* Наведение на кнопку меню (Активное состояние) */
+.main-nav > ul > li > a:hover, 
+.main-nav > ul > li > a.active,
+.dropdown:hover .dropdown-toggle {
+    background: var(--gradient-blue); /* Фон меняется на градиент */
+    color: var(--white); /* Текст белеет */
+    box-shadow: var(--shadow-md); /* Тень усиливается */
+    transform: translateY(-3px); /* Кнопка приподнимается */
+    border-color: transparent; /* Рамка исчезает */
+}
+
+/* =========================================
+   ВЫПАДАЮЩЕЕ МЕНЮ (DROPDOWN)
+   ========================================= */
+.dropdown {
+    position: relative; /* "Якорь" для выпадающего меню */
+}
+
+/* Контейнер выпадающего меню */
+.dropdown-menu {
+    position: absolute; /* Позиционируем относительно кнопки-родителя */
+    top: calc(100% + 5px); /* Сдвигаем вниз ровно под кнопку + 5px зазор */
+    left: 0; /* Прижимаем к левому краю кнопки */
+    background: var(--white); /* Белый фон списка */
+    min-width: 250px; /* Минимальная ширина списка */
+    box-shadow: var(--shadow-lg); /* Большая тень */
+    border-radius: 12px; /* Скругление углов контейнера */
+    padding: 15px 0; /* Отступы сверху и снизу */
+    
+    /* Эффекты скрытия и анимации появления */
+    opacity: 0; /* Полностью прозрачно */
+    visibility: hidden; /* Скрыто от кликов */
+    transform: translateY(15px); /* Смещено вниз */
+    transition: all 0.3s ease; /* Плавность */
+    
+    border-top: 4px solid var(--electric-cyan); /* Яркая голубая полоска сверху */
+    z-index: 1000;
+}
+
+/* Показываем меню при наведении на родительский li */
+.dropdown:hover .dropdown-menu {
+    opacity: 1; /* Делаем видимым */
+    visibility: visible; /* Разрешаем клики */
+    transform: translateY(0); /* Возвращаем на исходную позицию (эффект выплывания) */
+}
+
+/* Подпункты в выпадающем меню */
+.dropdown-menu a {
+    display: block; /* Ссылка на всю ширину строки для удобства клика */
+    text-align: left; /* Текст по левому краю */
+    padding: 12px 25px; /* Отступы кликабельной зоны */
+    text-transform: none; /* Обычные буквы (не заглавные) */
+    font-weight: 500;
+    font-size: 14px;
+    background: transparent;
+    border-radius: 0; /* Убираем овальность */
+    box-shadow: none; /* Убираем тень */
+    transform: none; /* Убираем эффект подпрыгивания */
+    border-bottom: 1px solid rgba(0,0,0,0.03); /* Очень бледная линия-разделитель */
+    color: var(--deep-blue);
+}
+
+/* Наведение на подпункт */
+.dropdown-menu a:hover {
+    background: var(--light-gray); /* Серый фон */
+    padding-left: 30px; /* Эффект смещения (стрелочки) вправо */
+    color: var(--electric-cyan); /* Голубой текст */
+}
+
+/* =========================================
+   ОСНОВНОЙ КОНТЕНТ (MAIN)
+   ========================================= */
+main {
+    padding-top: 95px; /* Защита от перекрытия контента фиксированной шапкой */
+    min-height: 60vh; /* Минимальная высота, чтобы подвал всегда был внизу экрана */
+}
+
+/* =========================================
+   МОБИЛЬНОЕ МЕНЮ (Адаптив)
+   ========================================= */
+.mobile-menu-btn {
+    display: none; /* Скрыто на компьютерах */
+    background: none;
+    border: none;
+    color: var(--deep-blue);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Спрятано за правым краем экрана */
+    width: 300px;
+    height: 100vh;
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
+    transition: right 0.3s; /* Плавный выезд */
+    z-index: 1100; /* Перекрывает даже шапку */
+}
+
+.mobile-menu.show {
+    right: 0; /* Класс, который показывает меню */
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.mobile-menu-close {
+    background: none;
+    border: none;
+    color: var(--deep-blue);
+    cursor: pointer;
+}
+
+.mobile-menu-content {
+    padding: 20px;
+}
+
+/* =========================================
+   ПОДВАЛ (FOOTER) - ОПТИМИЗИРОВАННЫЙ
+   ========================================= */
+footer {
+    background: var(--deep-blue); /* Синий фон */
+    color: var(--white); /* Белый текст */
+    padding: 60px 0 30px; /* Внутренние отступы */
+}
+
+/* Сетка контента в подвале (колонки) */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Автоматические колонки от 250px */
+    gap: 40px; /* Отступы между колонками */
+    margin-bottom: 40px; /* Отступ до линии копирайта */
+}
+
+/* Логотип в подвале */
+.footer-logo .logo-school {
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.footer-logo .logo-name {
+    color: var(--electric-cyan);
+    margin-bottom: 20px;
+}
+
+/* Социальные сети (кружки) */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+    border-radius: 50%; /* Идеальный круг */
+    font-size: 14px;
+    transition: var(--transition);
+    color: var(--white);
+}
+
+.social-links a:hover {
+    background: var(--electric-cyan); /* Становится голубым при наведении */
+    transform: translateY(-3px); /* Подпрыгивает */
+}
+
+/* ОБЪЕДИНЕННЫЕ стили заголовков (h4) колонок подвала */
+.footer-links h4,
+.contact-info h4 {
+    color: var(--white);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    position: relative; /* Якорь для голубой линии снизу */
+    padding-bottom: 10px;
+}
+
+/* ОБЪЕДИНЕННАЯ декоративная линия под заголовками h4 */
+.footer-links h4:after,
+.contact-info h4:after {
+    content: ''; /* Обязательно для псевдоэлементов */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--electric-cyan); /* Голубая полоска */
+}
+
+/* Списки в подвале */
+.footer-links ul {
+    list-style: none; /* Убираем маркеры */
+}
+
+.footer-links li {
+    margin-bottom: 10px; /* Расстояние между ссылками */
+}
+
+/* Обычный текст ссылок и контактов */
+.footer-links a,
+.contact-info p {
+    color: rgba(255, 255, 255, 0.8); /* Слегка тусклый белый цвет (80% непрозрачности) */
+    transition: var(--transition);
+}
+
+/* Выравнивание иконок контактов с текстом */
+.contact-info p {
+    display: flex;
+    align-items: center; /* Центруем иконку относительно текста */
+    gap: 10px; /* Зазор между иконкой и текстом */
+    margin-bottom: 15px;
+}
+
+/* Анимация ссылок в подвале */
+.footer-links a:hover {
+    color: var(--electric-cyan); /* Ярко-голубой цвет при наведении */
+    padding-left: 5px; /* Ссылка отъезжает немного вправо */
+}
+
+/* Иконки (SVG/FontAwesome) в блоке контактов */
+.contact-info svg,
+.contact-info i {
+    color: var(--electric-cyan); /* Голубой цвет иконок */
+    width: 20px;
+    height: 20px;
+}
+
+/* Самая нижняя часть подвала (Копирайт) */
+.footer-bottom {
+    display: flex; /* Текст в один ряд */
+    justify-content: space-between; /* Расталкиваем влево и вправо */
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная разделительная линия */
+    color: rgba(255, 255, 255, 0.6); /* Бледный текст */
+    font-size: 14px; /* Мелкий шрифт */
+}
+
+/* Имя разработчика */
+.developer {
+    color: var(--electric-cyan); /* Выделяем голубым */
+}

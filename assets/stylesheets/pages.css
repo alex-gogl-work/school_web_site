@@ -1,0 +1,88 @@
+/* =========================================
+   ДОКУМЕНТЫ И РЕСУРСЫ (общие)
+   ========================================= */
+.document-card, .resource-item {
+    background: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: var(--transition);
+    margin-bottom: 15px;
+}
+
+.document-card:hover, .resource-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--electric-cyan);
+}
+
+.document-icon, .resource-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--white);
+    flex-shrink: 0;
+}
+
+.document-info h4, .resource-content h4 {
+    color: var(--deep-blue);
+    margin-bottom: 5px;
+}
+
+.document-info p, .resource-content p {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.document-link {
+    color: var(--electric-cyan);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.document-link:hover {
+    gap: 8px;
+    color: var(--bright-orange);
+}
+
+/* =========================================
+   КАРТОЧКИ СПЕЦИАЛИСТОВ (общие)
+   ========================================= */
+.specialist-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.specialist-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.specialist-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--white);
+}

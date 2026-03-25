@@ -1,0 +1,142 @@
+/* =========================================
+   ОСНОВНЫЕ ПЕРЕМЕННЫЕ
+   ========================================= */
+:root {
+    --deep-blue: #003773;
+    --electric-cyan: #00BEF0;
+    --bright-orange: #FF8200;
+    --teal-accent: #0096A0;
+    --white: #FFFFFF;
+    --light-gray: #F5F7FA;
+    --gray: #E8ECF1;
+    --dark-gray: #6C757D;
+    
+    --gradient-blue: linear-gradient(135deg, var(--electric-cyan) 0%, var(--deep-blue) 100%);
+    --gradient-orange: linear-gradient(135deg, var(--bright-orange) 0%, #FFB400 100%);
+    --gradient-teal: linear-gradient(135deg, var(--teal-accent) 0%, var(--electric-cyan) 100%);
+    
+    --shadow-sm: 0 4px 12px rgba(0, 55, 115, 0.08);
+    --shadow-md: 0 8px 24px rgba(0, 55, 115, 0.12);
+    --shadow-lg: 0 16px 48px rgba(0, 55, 115, 0.16);
+    
+    --border-radius: 12px;
+    --border-radius-lg: 20px;
+    --transition: all 0.3s ease;
+}
+
+/* =========================================
+   СБРОС И БАЗОВЫЕ СТИЛИ
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Golos Text', 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--deep-blue);
+    background-color: var(--white);
+    overflow-x: hidden;
+    /* Отступ под фиксированную шапку — как в all_style: не задаём padding-top, первый блок (.hero / .page-hero) имеет margin-top: 80px */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1, h2 {
+    font-weight: 900; /* Black */
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight: 700; /* Bold */
+}
+
+h4, h5, h6 {
+    font-weight: 600;
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--gradient-blue);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+/* =========================================
+   ПАТТЕРНЫ (Фоновые эффекты)
+   ========================================= */
+.digital-rain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(0, 190, 240, 0.03) 10px, rgba(0, 190, 240, 0.03) 20px),
+        repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(0, 150, 160, 0.03) 10px, rgba(0, 150, 160, 0.03) 20px);
+    pointer-events: none;
+    z-index: 1;
+}dynamic-strokes
+
+.dynamic-strokes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, transparent 60%, rgba(255, 130, 0, 0.05) 60%),
+        linear-gradient(-45deg, transparent 70%, rgba(0, 190, 240, 0.05) 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Стрелка роста (Growth Arrow) - Фоновый водяной знак */
+.growth-arrow-bg {
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 50%;
+    height: 120%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M20 80 L80 20 L80 60 M80 20 L40 20' fill='none' stroke='%2300BEF0' stroke-width='4' stroke-opacity='0.05'/%3E%3C/svg%3E");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: right top;
+    pointer-events: none;
+    z-index: 1;
+}

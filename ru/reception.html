@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Виртуальная приемная директора КГУ Средняя школа №9 имени А. Байтурсынулы.">
+    <title>Виртуальная приемная - КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы»</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+
+   
+        <link rel="stylesheet" href="../assets/stylesheets/style.css">
+    
+        <link rel="stylesheet" href="../assets/stylesheets/news_page.css">
+    
+
+    
+    
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="">
+<header>
+    <div class="container header-main-wrapper">
+        <div class="header-logo-section">
+    <a href="../..">
+        <img id="main-logo" 
+             src="../assets/images/logo/logo_kaz.png" 
+             data-logo-ru="../assets/images/logo/logo_rus.png" 
+             data-logo-kk="../assets/images/logo/logo_kaz.png" 
+             alt="Логотип школы">
+    </a>
+</div>
+	<div class="header-content-section">
+		<div class="header-top-row">
+        <div class="school-title">
+                    <div class="school-name-main">
+                         КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы»
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <button id="toggle-dark-mode" class="accessibility-btn" title="Темная тема (Dark Mode)">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="toggle-bvi" class="accessibility-btn" title="Версия для слабовидящих">
+                        <i class="fas fa-eye"></i> <span>Доступность</span>
+                    </button>
+                    
+                    <div class="lang-switcher">
+                        <!-- DEBUG: page.url='ru/reception.html' base_url='..' i18n_page_locale='ru' current_lang='' -->
+                        
+                        
+                            
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+                            
+                            
+                                
+                            
+
+                            <a href="../ru/reception.html" 
+                               class="lang-btn active" 
+                               data-lang="ru">
+                               RU
+                            </a>
+                        
+                            
+                            
+
+                            <a href="../reception.html" 
+                               class="lang-btn " 
+                               data-lang="kk">
+                               KK
+                            </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    
+                        
+                            <li class="menu">
+                                <a href="index.html" 
+                                    
+                                   data-nav-title="Главная">Главная</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="about.html" 
+                                    
+                                   data-nav-title="О школе">О школе</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="educational.html" 
+                                    
+                                   data-nav-title="Учебный процесс">Учебный процесс</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="school-life.html" 
+                                    
+                                   data-nav-title="Жизнь школы">Жизнь школы</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="official.html" 
+                                    
+                                   data-nav-title="Официальный раздел">Официальный раздел</a>
+                            </li>
+                        
+                    
+                        
+                            <li class="menu">
+                                <a href="news.html" 
+                                    
+                                   data-nav-title="Новости">Новости</a>
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+        </div>
+</div>
+</header>
+
+    <main>
+        <section class="page-hero">
+    <div class="container page-hero-content">
+        <h1>ВИРТУАЛЬНАЯ ПРИЕМНАЯ</h1>
+        <p>Электронные обращения и вопросы граждан</p>
+    </div>
+</section>
+
+<style>
+.reception-container { padding: 60px 0; max-width: 800px; margin: 0 auto; }
+.reception-form { background: var(--white); border-radius: 15px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--light-gray); }
+.form-group { margin-bottom: 25px; }
+.form-label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--deep-blue); }
+.form-control { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; font-family: 'Golos Text', sans-serif; transition: border-color 0.3s, box-shadow 0.3s; background: #fdfdfd; }
+.form-control:focus { outline: none; border-color: var(--electric-cyan); box-shadow: 0 0 0 3px rgba(0, 190, 240, 0.1); }
+textarea.form-control { min-height: 150px; resize: vertical; }
+.submit-btn { background: var(--deep-blue); color: #fff; border: none; padding: 15px 30px; font-size: 1.1rem; font-weight: 600; border-radius: 8px; cursor: pointer; width: 100%; transition: background 0.3s, transform 0.2s; }
+.submit-btn:hover { background: var(--bright-orange); transform: translateY(-2px); }
+.reception-rules { margin-bottom: 40px; background: var(--light-blue); padding: 25px; border-radius: 12px; border-left: 5px solid var(--electric-cyan); }
+.reception-rules h3 { margin-top: 0; color: var(--deep-blue); }
+.reception-rules ul { padding-left: 20px; margin-bottom: 0; }
+.reception-rules li { margin-bottom: 10px; }
+</style>
+
+<div class="container reception-container">
+    <div class="reception-rules" data-aos="fade-right">
+        <h3>Правила подачи обращения</h3>
+        <ul>
+            <li>Внимательно заполните все поля со звездочкой (*).</li>
+            <li>Ответ на ваше обращение будет направлен на электронный адрес в течение 15 рабочих дней.</li>
+            <li>Анонимные обращения, а также обращения с нецензурной лексикой, не рассматриваются.</li>
+        </ul>
+    </div>
+
+    <form class="reception-form" data-aos="fade-up">
+        <div class="form-group">
+            <label class="form-label">Ф.И.О. полностью *</label>
+            <input type="text" class="form-control" placeholder="Иванов Иван Иванович" required>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Email для ответа *</label>
+            <input type="email" class="form-control" placeholder="ivanov@example.com" required>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Мобильный телефон</label>
+            <input type="tel" class="form-control" placeholder="+7 (700) 000-00-00">
+        </div>
+        <div class="form-group">
+            <label class="form-label">Тема обращения *</label>
+            <select class="form-control" required>
+                <option value="">Выберите тему...</option>
+                <option>Учебный процесс</option>
+                <option>Питание в столовой</option>
+                <option>Вопросы безопасности</option>
+                <option>Другое</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Текст обращения *</label>
+            <textarea class="form-control" placeholder="Опишите ваш вопрос или предложение..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn" onclick="event.preventDefault(); alert('Спасибо! Ваше обращение успешно отправлено.');">Отправить обращение</button>
+    </form>
+</div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-school">№9 МЕКТЕП (DEBUG: ru)</div>
+                    <div class="logo-name">КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы»</div>
+                    <div class="social-links">
+
+                        <a href="https://t.me/school9_uralsk" aria-label="telegram">TELEGRAM</a>
+
+                        <a href="https://instagram.com/school9_uralsk" aria-label="instagram">INSTAGRAM</a>
+
+                        <a href="https://facebook.com/school9" aria-label="facebook">FACEBOOK</a>
+
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-nav-title="Быстрые ссылки">БЫСТРЫЕ ССЫЛКИ</h4>
+                    <ul>
+                        <li><a href="../ru/index.html" data-nav-title="Главная">Главная</a></li>
+                        <li><a href="../ru/about.html" data-nav-title="О школе">О школе</a></li>
+                        <li><a href="../ru/news.html" data-nav-title="Новости">Новости</a></li>
+                        <li><a href="../ru/about.html#tab-contacts" data-nav-title="Контакты">Контакты</a></li>
+                        <li><a href="https://egov.kz/cms/ru/articles/state_symbols" target="_blank" data-nav-title="Гос. символы">
+                            Государственные символы
+                        </a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-nav-title="Документы">ДОКУМЕНТЫ</h4>
+                    <ul>
+                        <li><a href="../ru/documents/ustav.html" data-nav-title="Устав школы">Устав школы</a></li>
+                        <li><a href="../ru/documents/license.html" data-nav-title="Лицензия">Лицензия</a></li>
+                        <li><a href="../ru/documents/admission.html" data-nav-title="Правила приема">Правила приема</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-nav-title="Контакты">КОНТАКТЫ</h4>
+                        <address>
+                            <p>📍 г. Петропавловск, ул. Победы, 5</p>
+                            <p>📞 +7 (7152) 37-11-24</p>
+                            <p>📞 Телефон доверия: +7 (7152) 47-51-89</p>
+                            <p>✉️ school9@sqo.edu.kz</p>
+                            <p>🕒 Пн-Пт 8:00–19:00</p>
+                        </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 КГУ «Средняя школа № 9 имени Ахмета Байтурсынулы». Все права защищены.</div>
+                <div class="developer">Разработано: IT-класс №9 Мектеп</div>
+            </div>
+        </div>
+    </footer>
+<script>
+    // Передаем переменную из MkDocs в глобальный JavaScript
+    var base_url = "..";
+
+    // Исправляем пути к картинкам для GitHub Pages (подпапка school_web_site)
+    // MkDocs генерирует относительные пути, которые ломаются в подпапках /ru/, /ru/mo/ и т.д.
+    document.addEventListener('DOMContentLoaded', function() {
+        var SITE_ROOT = 'https://alex-gogl-work.github.io/school_web_site/';
+        document.querySelectorAll('img[src]').forEach(function(img) {
+            // Если картинка не загрузилась или src содержит assets/ но не абсолютный путь
+            var src = img.getAttribute('src');
+            if (src && !src.startsWith('http') && !src.startsWith('//') && src.indexOf('assets/') !== -1) {
+                // Нормализуем путь: убираем ../ и оставляем только часть начиная с assets/
+                var assetsIndex = src.indexOf('assets/');
+                if (assetsIndex !== -1) {
+                    img.setAttribute('src', SITE_ROOT + src.substring(assetsIndex));
+                }
+            }
+        });
+    });
+</script>
+    
+        <script src="../assets/js/teachers_data.js"></script>
+    
+        <script src="../assets/js/main.js"></script>
+    
+        <script src="../assets/js/accessibility.js"></script>
+    
+        <script src="../assets/js/news_page.js"></script>
+    
+        <script src="../assets/js/mo_dynamic.js"></script>
+    
+        <script src="../assets/js/teachers_render.js"></script>
+    
+
+    
+
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-add AOS to standard components
+            const animatedElements = document.querySelectorAll('.hub-card, .info-card, .club-card, .news-card, .dept-card, .emergency-card, .gallery-item, .hours-card, .contact-item, .contact-info, .map-container');
+            animatedElements.forEach((el, index) => {
+                if (!el.hasAttribute('data-aos')) {
+                    el.setAttribute('data-aos', 'fade-up');
+                    el.setAttribute('data-aos-delay', (index % 4) * 100);
+                }
+            });
+
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 50
+            });
+        });
+    </script>
+</body>
+</html>

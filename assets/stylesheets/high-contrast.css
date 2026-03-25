@@ -1,0 +1,97 @@
+/* =========================================
+   РЕЖИМ ВЫСОКОЙ КОНТРАСТНОСТИ (BVI Panel)
+   ========================================= */
+
+.bvi-panel {
+    display: none; position: fixed; top: 0; left: 0; width: 100%;
+    background: #fff; border-bottom: 3px solid #000;
+    z-index: 10000; padding: 15px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.bvi-panel.visible { display: block; }
+
+.bvi-panel-content {
+    display: flex; justify-content: center; align-items: center;
+    gap: 30px; flex-wrap: wrap; max-width: 1200px;
+    margin: 0 auto; position: relative; padding: 0 20px;
+}
+.bvi-group { display: flex; align-items: center; gap: 10px; }
+.bvi-label { font-weight: bold; font-family: sans-serif; color: #000; font-size: 18px; }
+
+.bvi-btn {
+    padding: 8px 15px; border: 2px solid #000; border-radius: 4px;
+    background: #fff; cursor: pointer; font-size: 16px; font-weight: bold; color: #000;
+    transition: all 0.2s;
+}
+.bvi-btn:hover { background: #eee; }
+.bvi-btn.active { outline: 3px solid #ff0000; outline-offset: 2px; }
+
+.bvi-color-btn { width: 50px; text-align: center; font-size: 20px; }
+.color-bw { background: white !important; color: black !important; }
+.color-wb { background: black !important; color: white !important; }
+.color-by { background: #9dd1ff !important; color: #063462 !important; border-color: #063462 !important; }
+.color-normal { background: #eee !important; color: #333 !important; }
+
+.bvi-close-btn { position: absolute; right: 20px; background: none; border: none; font-size: 40px; cursor: pointer; color: #000; font-weight: bold; }
+
+/* Active Panel Spacing */
+body.bvi-active { padding-top: 80px; }
+body.bvi-active header { top: 80px; }
+body.bvi-active .mobile-menu { top: 80px; height: calc(100vh - 80px); }
+
+/* =========================================
+   FONT SIZES
+   ========================================= */
+body.bvi-fz-large, body.bvi-fz-large p, body.bvi-fz-large a, body.bvi-fz-large span, body.bvi-fz-large div { font-size: 120% !important; line-height: 1.6 !important; }
+body.bvi-fz-xlarge, body.bvi-fz-xlarge p, body.bvi-fz-xlarge a, body.bvi-fz-xlarge span, body.bvi-fz-xlarge div { font-size: 150% !important; line-height: 1.6 !important; }
+
+/* Except the BVI panel itself */
+.bvi-panel *, .bvi-panel { font-size: initial !important; line-height: initial !important; }
+
+/* =========================================
+   THEMES
+   ========================================= */
+body.bvi-theme-bw, body.bvi-theme-bw * {
+    background-color: white !important;
+    color: black !important;
+    border-color: black !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
+}
+
+body.bvi-theme-wb, body.bvi-theme-wb * {
+    background-color: black !important;
+    color: white !important;
+    border-color: white !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
+}
+
+body.bvi-theme-by, body.bvi-theme-by * {
+    background-color: #9dd1ff !important;
+    color: #063462 !important;
+    border-color: #063462 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
+}
+
+/* Except the BVI panel */
+body[class*="bvi-theme-"] .bvi-panel, 
+body[class*="bvi-theme-"] .bvi-panel * {
+    background-color: initial !important;
+    color: initial !important;
+    border-color: initial !important;
+}
+
+/* =========================================
+   IMAGES
+   ========================================= */
+body.bvi-img-off img, 
+body.bvi-img-off video, 
+body.bvi-img-off .hero-bg, 
+body.bvi-img-off iframe {
+    display: none !important;
+    background-image: none !important;
+}
